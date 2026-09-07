@@ -9,6 +9,7 @@ import {
   InundationPolygonFeature
 } from '../types/map';
 import { ConfidenceLevel, AlertSeverity, QualityFlag, ProvenanceMetadata } from '../types';
+import { getWebSocketUrl } from '../apiConfig';
 
 export const INITIAL_MAP_LAYERS: MapLayerConfig[] = [
   { id: 'BASEMAP', name: 'OpenStreetMap Basemap', category: 'base', enabled: true, opacity: 1.0, available: true },
@@ -258,9 +259,7 @@ export const useLiveMapData = (activeHorizonMinutes: number = 0) => {
     const connectWs = () => {
       if (isUnmounted) return;
       try {
-        const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-        const host = window.location.host || '127.0.0.1:8000';
-        ws = new WebSocket(`${protocol}//${host}/ws/v1/live`);
+        ws = new WebSocket(getWebSocketUrl('/ws/v1/live'));
 
         ws.onopen = () => {
           delay = 1000;

@@ -21,6 +21,7 @@ import { SettingsView } from './views/SettingsView';
 import { PublicPortalView } from './views/PublicPortalView';
 import { AdminSecurityView } from './views/AdminSecurityView';
 import { ConfidenceLevel, SystemMode } from './types';
+import { getWebSocketUrl } from './apiConfig';
 
 const MainAppContent: React.FC = () => {
   const [activeView, setActiveView] = useState<string>('overview');
@@ -73,9 +74,7 @@ const MainAppContent: React.FC = () => {
     const connect = () => {
       if (isUnmounted) return;
       try {
-        const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-        const wsHost = window.location.host || '127.0.0.1:8000';
-        ws = new WebSocket(`${wsProtocol}//${wsHost}/ws/v1/live`);
+        ws = new WebSocket(getWebSocketUrl('/ws/v1/live'));
 
         ws.onopen = () => {
           delay = 1000;
