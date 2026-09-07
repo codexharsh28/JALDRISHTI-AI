@@ -10,7 +10,7 @@
 
 **JALDRISHTI AI** transforms multi-source atmospheric, radar, satellite, hydrological, and digital elevation observations into real-time actionable decision intelligence:
 
-$$\text{Observations + Radar + Satellite + NWP} \longrightarrow \text{Quality Control} \longrightarrow \text{Fusion} \longrightarrow \text{Nowcast (0–6h)} \longrightarrow \text{Discharge Forecast (6–72h)} \longrightarrow \text{2D Inundation} \longrightarrow \text{Impact & Gated Alerts}$$
+$$\text{Observations + Radar + Satellite + NWP} \longrightarrow \text{Quality Control} \longrightarrow \text{Fusion} \longrightarrow \text{Nowcast (0–6h)} \longrightarrow \text{Discharge Forecast (6–72h)} \longrightarrow \text{2D Inundation} \longrightarrow \text{Impact and Gated Alerts}$$
 
 ```
 +---------------------------------------------------------------------------------------------------------+
