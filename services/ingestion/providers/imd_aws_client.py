@@ -144,7 +144,7 @@ class IMDAWSClient:
         while attempt < self.max_retries:
             attempt += 1
             try:
-                with urllib.request.urlopen(req, context=ssl_ctx, timeout=self.timeout_seconds) as response:
+                with urllib.request.urlopen(req, context=ssl_ctx, timeout=self.timeout_seconds) as response:  # nosec B310
                     status_code = response.status
                     self._last_http_status = status_code
                     raw_bytes = response.read()

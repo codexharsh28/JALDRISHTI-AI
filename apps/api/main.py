@@ -2403,7 +2403,7 @@ def get_admin_database_stats_endpoint(authorization: Optional[str] = Header(None
         with db_manager.transaction() as conn:
             for tbl in ["audit_logs", "users", "user_subscriptions", "notifications"]:
                 try:
-                    c = conn.execute(f"SELECT COUNT(*) as count FROM {tbl}")
+                    c = conn.execute(f"SELECT COUNT(*) as count FROM {tbl}")  # nosec B608
                     r = c.fetchone()
                     if r:
                         table_stats[tbl] = r["count"]
