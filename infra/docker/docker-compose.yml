@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: ../..
+      dockerfile: infra/docker/Dockerfile.api
+    container_name: jaldrishti-api
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=production
+      - SIMULATION_MODE=true
+      - PILOT_BASIN_CONFIG=basin_config.yaml
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  web:
+    build:
+      context: ../../apps/web
+      dockerfile: Dockerfile
+    container_name: jaldrishti-web
+    ports:
+      - "3000:80"
+    depends_on:
+      - api
+    restart: unless-stopped

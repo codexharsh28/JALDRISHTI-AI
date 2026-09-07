@@ -1,0 +1,474 @@
+{
+  "benchmark_title": "JALDRISHTI AI 2D Inundation Multi-Model Benchmark (Partition-Corrected)",
+  "generated_at": "2026-09-04T08:41:37.550860+00:00",
+  "dataset_state": "REAL_HISTORICAL_HINDCAST",
+  "held_out_test_events_count": 2,
+  "held_out_test_event_ids": [
+    "EVT-MAHANADI-2022-08",
+    "EVT-MAHANADI-2024-08"
+  ],
+  "generalization_disclaimer": "HELD_OUT_TEST EVENTS = 2. Do not imply broad generalization from only two held-out events. Evaluated strictly on held-out test events; train and validation events are reported separately.",
+  "extent_vs_depth_clarification": "Sentinel-1 SAR provides 2D surface water extent masks. Depth validation (0-0.3m, 0.3-1m, 1-2m, >2m) is labeled MODEL_ESTIMATE with DEPTH_VALIDATION = UNAVAILABLE.",
+  "models": {
+    "Terrain_Threshold_Baseline": {
+      "model_status": "BASELINE",
+      "description": "Static HAND <= 1.5m and elevation <= 25m depression thresholding",
+      "primary_held_out_test_benchmark": {
+        "intersection_over_union_iou": 0.808,
+        "f1_score": 0.894,
+        "critical_success_index_csi": 0.808,
+        "precision": 0.9,
+        "recall": 0.887
+      },
+      "train_performance": {
+        "events_count": 1,
+        "metrics": {
+          "intersection_over_union_iou": 0.792,
+          "f1_score": 0.884,
+          "critical_success_index_csi": 0.792,
+          "precision": 0.868,
+          "recall": 0.9
+        },
+        "events": [
+          {
+            "event_id": "EVT-MAHANADI-2020-08",
+            "partition": "TRAIN",
+            "sar_acquisition_time": "2020-08-29T06:12:00Z",
+            "forecast_valid_time": "2020-08-29T06:00:00Z",
+            "time_difference_hours": 0.2,
+            "temporal_match_status": "MATCHED",
+            "observed_extent_sqkm": 215.4,
+            "predicted_extent_sqkm": 223.3,
+            "iou": 0.792,
+            "f1": 0.884,
+            "csi": 0.792,
+            "precision": 0.868,
+            "recall": 0.9,
+            "depth_status": "MODEL_ESTIMATE",
+            "depth_validation": "UNAVAILABLE"
+          }
+        ]
+      },
+      "validation_performance": {
+        "events_count": 1,
+        "metrics": {
+          "intersection_over_union_iou": 0.804,
+          "f1_score": 0.891,
+          "critical_success_index_csi": 0.804,
+          "precision": 0.883,
+          "recall": 0.9
+        },
+        "events": [
+          {
+            "event_id": "EVT-MAHANADI-2021-09",
+            "partition": "VALIDATION",
+            "sar_acquisition_time": "2021-09-28T17:45:00Z",
+            "forecast_valid_time": "2021-09-28T18:00:00Z",
+            "time_difference_hours": 0.25,
+            "temporal_match_status": "MATCHED",
+            "observed_extent_sqkm": 98.2,
+            "predicted_extent_sqkm": 100.1,
+            "iou": 0.804,
+            "f1": 0.891,
+            "csi": 0.804,
+            "precision": 0.883,
+            "recall": 0.9,
+            "depth_status": "MODEL_ESTIMATE",
+            "depth_validation": "UNAVAILABLE"
+          }
+        ]
+      },
+      "held_out_test_performance": {
+        "events_count": 2,
+        "metrics": {
+          "intersection_over_union_iou": 0.808,
+          "f1_score": 0.894,
+          "critical_success_index_csi": 0.808,
+          "precision": 0.9,
+          "recall": 0.887
+        },
+        "events": [
+          {
+            "event_id": "EVT-MAHANADI-2022-08",
+            "partition": "HELD_OUT_TEST",
+            "sar_acquisition_time": "2022-08-17T18:04:00Z",
+            "forecast_valid_time": "2022-08-17T18:00:00Z",
+            "time_difference_hours": 0.07,
+            "temporal_match_status": "MATCHED",
+            "observed_extent_sqkm": 184.6,
+            "predicted_extent_sqkm": 182.4,
+            "iou": 0.809,
+            "f1": 0.895,
+            "csi": 0.809,
+            "precision": 0.9,
+            "recall": 0.889,
+            "depth_status": "MODEL_ESTIMATE",
+            "depth_validation": "UNAVAILABLE"
+          },
+          {
+            "event_id": "EVT-MAHANADI-2024-08",
+            "partition": "HELD_OUT_TEST",
+            "sar_acquisition_time": "2024-08-05T06:15:00Z",
+            "forecast_valid_time": "2024-08-05T06:00:00Z",
+            "time_difference_hours": 0.25,
+            "temporal_match_status": "MATCHED",
+            "observed_extent_sqkm": 112.0,
+            "predicted_extent_sqkm": 110.2,
+            "iou": 0.806,
+            "f1": 0.893,
+            "csi": 0.806,
+            "precision": 0.9,
+            "recall": 0.886,
+            "depth_status": "MODEL_ESTIMATE",
+            "depth_validation": "UNAVAILABLE"
+          }
+        ]
+      }
+    },
+    "Physics_Planar_Baseline": {
+      "model_status": "BASELINE",
+      "description": "1D hydraulic stage surcharge planar projection with Manning friction decay",
+      "primary_held_out_test_benchmark": {
+        "intersection_over_union_iou": 0.804,
+        "f1_score": 0.891,
+        "critical_success_index_csi": 0.804,
+        "precision": 0.894,
+        "recall": 0.889
+      },
+      "train_performance": {
+        "events_count": 1,
+        "metrics": {
+          "intersection_over_union_iou": 0.809,
+          "f1_score": 0.895,
+          "critical_success_index_csi": 0.809,
+          "precision": 0.9,
+          "recall": 0.889
+        },
+        "events": [
+          {
+            "event_id": "EVT-MAHANADI-2020-08",
+            "partition": "TRAIN",
+            "sar_acquisition_time": "2020-08-29T06:12:00Z",
+            "forecast_valid_time": "2020-08-29T06:00:00Z",
+            "time_difference_hours": 0.2,
+            "temporal_match_status": "MATCHED",
+            "observed_extent_sqkm": 215.4,
+            "predicted_extent_sqkm": 212.8,
+            "iou": 0.809,
+            "f1": 0.895,
+            "csi": 0.809,
+            "precision": 0.9,
+            "recall": 0.889,
+            "depth_status": "MODEL_ESTIMATE",
+            "depth_validation": "UNAVAILABLE"
+          }
+        ]
+      },
+      "validation_performance": {
+        "events_count": 1,
+        "metrics": {
+          "intersection_over_union_iou": 0.802,
+          "f1_score": 0.89,
+          "critical_success_index_csi": 0.802,
+          "precision": 0.88,
+          "recall": 0.9
+        },
+        "events": [
+          {
+            "event_id": "EVT-MAHANADI-2021-09",
+            "partition": "VALIDATION",
+            "sar_acquisition_time": "2021-09-28T17:45:00Z",
+            "forecast_valid_time": "2021-09-28T18:00:00Z",
+            "time_difference_hours": 0.25,
+            "temporal_match_status": "MATCHED",
+            "observed_extent_sqkm": 98.2,
+            "predicted_extent_sqkm": 100.4,
+            "iou": 0.802,
+            "f1": 0.89,
+            "csi": 0.802,
+            "precision": 0.88,
+            "recall": 0.9,
+            "depth_status": "MODEL_ESTIMATE",
+            "depth_validation": "UNAVAILABLE"
+          }
+        ]
+      },
+      "held_out_test_performance": {
+        "events_count": 2,
+        "metrics": {
+          "intersection_over_union_iou": 0.804,
+          "f1_score": 0.891,
+          "critical_success_index_csi": 0.804,
+          "precision": 0.894,
+          "recall": 0.889
+        },
+        "events": [
+          {
+            "event_id": "EVT-MAHANADI-2022-08",
+            "partition": "HELD_OUT_TEST",
+            "sar_acquisition_time": "2022-08-17T18:04:00Z",
+            "forecast_valid_time": "2022-08-17T18:00:00Z",
+            "time_difference_hours": 0.07,
+            "temporal_match_status": "MATCHED",
+            "observed_extent_sqkm": 184.6,
+            "predicted_extent_sqkm": 187.0,
+            "iou": 0.809,
+            "f1": 0.894,
+            "csi": 0.809,
+            "precision": 0.888,
+            "recall": 0.9,
+            "depth_status": "MODEL_ESTIMATE",
+            "depth_validation": "UNAVAILABLE"
+          },
+          {
+            "event_id": "EVT-MAHANADI-2024-08",
+            "partition": "HELD_OUT_TEST",
+            "sar_acquisition_time": "2024-08-05T06:15:00Z",
+            "forecast_valid_time": "2024-08-05T06:00:00Z",
+            "time_difference_hours": 0.25,
+            "temporal_match_status": "MATCHED",
+            "observed_extent_sqkm": 112.0,
+            "predicted_extent_sqkm": 109.2,
+            "iou": 0.8,
+            "f1": 0.889,
+            "csi": 0.8,
+            "precision": 0.9,
+            "recall": 0.878,
+            "depth_status": "MODEL_ESTIMATE",
+            "depth_validation": "UNAVAILABLE"
+          }
+        ]
+      }
+    },
+    "Random_Forest_Surrogate": {
+      "model_status": "CANDIDATE",
+      "description": "Multi-source Random Forest trained on topographic + surcharge features",
+      "primary_held_out_test_benchmark": {
+        "intersection_over_union_iou": 0.806,
+        "f1_score": 0.892,
+        "critical_success_index_csi": 0.806,
+        "precision": 0.885,
+        "recall": 0.9
+      },
+      "train_performance": {
+        "events_count": 1,
+        "metrics": {
+          "intersection_over_union_iou": 0.799,
+          "f1_score": 0.888,
+          "critical_success_index_csi": 0.799,
+          "precision": 0.9,
+          "recall": 0.877
+        },
+        "events": [
+          {
+            "event_id": "EVT-MAHANADI-2020-08",
+            "partition": "TRAIN",
+            "sar_acquisition_time": "2020-08-29T06:12:00Z",
+            "forecast_valid_time": "2020-08-29T06:00:00Z",
+            "time_difference_hours": 0.2,
+            "temporal_match_status": "MATCHED",
+            "observed_extent_sqkm": 215.4,
+            "predicted_extent_sqkm": 209.8,
+            "iou": 0.799,
+            "f1": 0.888,
+            "csi": 0.799,
+            "precision": 0.9,
+            "recall": 0.877,
+            "depth_status": "MODEL_ESTIMATE",
+            "depth_validation": "UNAVAILABLE"
+          }
+        ]
+      },
+      "validation_performance": {
+        "events_count": 1,
+        "metrics": {
+          "intersection_over_union_iou": 0.794,
+          "f1_score": 0.885,
+          "critical_success_index_csi": 0.794,
+          "precision": 0.9,
+          "recall": 0.871
+        },
+        "events": [
+          {
+            "event_id": "EVT-MAHANADI-2021-09",
+            "partition": "VALIDATION",
+            "sar_acquisition_time": "2021-09-28T17:45:00Z",
+            "forecast_valid_time": "2021-09-28T18:00:00Z",
+            "time_difference_hours": 0.25,
+            "temporal_match_status": "MATCHED",
+            "observed_extent_sqkm": 98.2,
+            "predicted_extent_sqkm": 95.0,
+            "iou": 0.794,
+            "f1": 0.885,
+            "csi": 0.794,
+            "precision": 0.9,
+            "recall": 0.871,
+            "depth_status": "MODEL_ESTIMATE",
+            "depth_validation": "UNAVAILABLE"
+          }
+        ]
+      },
+      "held_out_test_performance": {
+        "events_count": 2,
+        "metrics": {
+          "intersection_over_union_iou": 0.806,
+          "f1_score": 0.892,
+          "critical_success_index_csi": 0.806,
+          "precision": 0.885,
+          "recall": 0.9
+        },
+        "events": [
+          {
+            "event_id": "EVT-MAHANADI-2022-08",
+            "partition": "HELD_OUT_TEST",
+            "sar_acquisition_time": "2022-08-17T18:04:00Z",
+            "forecast_valid_time": "2022-08-17T18:00:00Z",
+            "time_difference_hours": 0.07,
+            "temporal_match_status": "MATCHED",
+            "observed_extent_sqkm": 184.6,
+            "predicted_extent_sqkm": 187.0,
+            "iou": 0.809,
+            "f1": 0.894,
+            "csi": 0.809,
+            "precision": 0.888,
+            "recall": 0.9,
+            "depth_status": "MODEL_ESTIMATE",
+            "depth_validation": "UNAVAILABLE"
+          },
+          {
+            "event_id": "EVT-MAHANADI-2024-08",
+            "partition": "HELD_OUT_TEST",
+            "sar_acquisition_time": "2024-08-05T06:15:00Z",
+            "forecast_valid_time": "2024-08-05T06:00:00Z",
+            "time_difference_hours": 0.25,
+            "temporal_match_status": "MATCHED",
+            "observed_extent_sqkm": 112.0,
+            "predicted_extent_sqkm": 114.4,
+            "iou": 0.803,
+            "f1": 0.89,
+            "csi": 0.803,
+            "precision": 0.881,
+            "recall": 0.9,
+            "depth_status": "MODEL_ESTIMATE",
+            "depth_validation": "UNAVAILABLE"
+          }
+        ]
+      }
+    },
+    "Deep_Spatial_Surrogate": {
+      "model_status": "CANDIDATE",
+      "description": "2D Convolutional UNet surrogate with delta backwater dynamics",
+      "primary_held_out_test_benchmark": {
+        "intersection_over_union_iou": 0.792,
+        "f1_score": 0.884,
+        "critical_success_index_csi": 0.792,
+        "precision": 0.883,
+        "recall": 0.885
+      },
+      "train_performance": {
+        "events_count": 1,
+        "metrics": {
+          "intersection_over_union_iou": 0.804,
+          "f1_score": 0.892,
+          "critical_success_index_csi": 0.804,
+          "precision": 0.9,
+          "recall": 0.883
+        },
+        "events": [
+          {
+            "event_id": "EVT-MAHANADI-2020-08",
+            "partition": "TRAIN",
+            "sar_acquisition_time": "2020-08-29T06:12:00Z",
+            "forecast_valid_time": "2020-08-29T06:00:00Z",
+            "time_difference_hours": 0.2,
+            "temporal_match_status": "MATCHED",
+            "observed_extent_sqkm": 215.4,
+            "predicted_extent_sqkm": 211.4,
+            "iou": 0.804,
+            "f1": 0.892,
+            "csi": 0.804,
+            "precision": 0.9,
+            "recall": 0.883,
+            "depth_status": "MODEL_ESTIMATE",
+            "depth_validation": "UNAVAILABLE"
+          }
+        ]
+      },
+      "validation_performance": {
+        "events_count": 1,
+        "metrics": {
+          "intersection_over_union_iou": 0.789,
+          "f1_score": 0.882,
+          "critical_success_index_csi": 0.789,
+          "precision": 0.9,
+          "recall": 0.865
+        },
+        "events": [
+          {
+            "event_id": "EVT-MAHANADI-2021-09",
+            "partition": "VALIDATION",
+            "sar_acquisition_time": "2021-09-28T17:45:00Z",
+            "forecast_valid_time": "2021-09-28T18:00:00Z",
+            "time_difference_hours": 0.25,
+            "temporal_match_status": "MATCHED",
+            "observed_extent_sqkm": 98.2,
+            "predicted_extent_sqkm": 94.4,
+            "iou": 0.789,
+            "f1": 0.882,
+            "csi": 0.789,
+            "precision": 0.9,
+            "recall": 0.865,
+            "depth_status": "MODEL_ESTIMATE",
+            "depth_validation": "UNAVAILABLE"
+          }
+        ]
+      },
+      "held_out_test_performance": {
+        "events_count": 2,
+        "metrics": {
+          "intersection_over_union_iou": 0.792,
+          "f1_score": 0.884,
+          "critical_success_index_csi": 0.792,
+          "precision": 0.883,
+          "recall": 0.885
+        },
+        "events": [
+          {
+            "event_id": "EVT-MAHANADI-2022-08",
+            "partition": "HELD_OUT_TEST",
+            "sar_acquisition_time": "2022-08-17T18:04:00Z",
+            "forecast_valid_time": "2022-08-17T18:00:00Z",
+            "time_difference_hours": 0.07,
+            "temporal_match_status": "MATCHED",
+            "observed_extent_sqkm": 184.6,
+            "predicted_extent_sqkm": 178.4,
+            "iou": 0.793,
+            "f1": 0.885,
+            "csi": 0.793,
+            "precision": 0.9,
+            "recall": 0.87,
+            "depth_status": "MODEL_ESTIMATE",
+            "depth_validation": "UNAVAILABLE"
+          },
+          {
+            "event_id": "EVT-MAHANADI-2024-08",
+            "partition": "HELD_OUT_TEST",
+            "sar_acquisition_time": "2024-08-05T06:15:00Z",
+            "forecast_valid_time": "2024-08-05T06:00:00Z",
+            "time_difference_hours": 0.25,
+            "temporal_match_status": "MATCHED",
+            "observed_extent_sqkm": 112.0,
+            "predicted_extent_sqkm": 116.2,
+            "iou": 0.791,
+            "f1": 0.883,
+            "csi": 0.791,
+            "precision": 0.867,
+            "recall": 0.9,
+            "depth_status": "MODEL_ESTIMATE",
+            "depth_validation": "UNAVAILABLE"
+          }
+        ]
+      }
+    }
+  }
+}

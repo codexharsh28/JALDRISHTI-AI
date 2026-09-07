@@ -1,0 +1,71 @@
+{
+  "report_title": "2D Hydrodynamic Inundation Surrogate vs Sentinel-1 SAR Flood Reference Validation",
+  "generated_at": "2026-09-04T08:41:37.553024+00:00",
+  "dataset_state": "REAL_HISTORICAL_HINDCAST",
+  "model_status": "CANDIDATE",
+  "depth_status": "MODEL_ESTIMATE",
+  "depth_validation": "UNAVAILABLE",
+  "held_out_test_events_count": 2,
+  "generalization_disclaimer": "HELD_OUT_TEST EVENTS = 2. Do not imply broad generalization from only two held-out events.",
+  "primary_held_out_test_benchmark": {
+    "intersection_over_union_iou": 0.792,
+    "f1_score": 0.884,
+    "critical_success_index_csi": 0.792,
+    "precision": 0.883,
+    "recall": 0.885
+  },
+  "partitioned_evaluations": {
+    "train_performance": {
+      "description": "Training and development performance (EXCLUDED from primary benchmark claims)",
+      "events": [
+        {
+          "event_id": "EVT-MAHANADI-2020-08",
+          "sar_date": "2020-08-29",
+          "observed_extent_sqkm": 215.4,
+          "predicted_extent_sqkm": 211.4,
+          "iou": 0.804,
+          "f1": 0.892
+        }
+      ]
+    },
+    "validation_performance": {
+      "description": "Tuning and validation performance (EXCLUDED from primary benchmark claims)",
+      "events": [
+        {
+          "event_id": "EVT-MAHANADI-2021-09",
+          "sar_date": "2021-09-28",
+          "observed_extent_sqkm": 98.2,
+          "predicted_extent_sqkm": 94.4,
+          "iou": 0.789,
+          "f1": 0.882
+        }
+      ]
+    },
+    "held_out_test_performance": {
+      "description": "Primary untouched test performance (Constitutes genuine validation evidence)",
+      "events": [
+        {
+          "event_id": "EVT-MAHANADI-2022-08",
+          "sar_date": "2022-08-17",
+          "observed_extent_sqkm": 184.6,
+          "predicted_extent_sqkm": 178.4,
+          "iou": 0.793,
+          "f1": 0.885,
+          "time_difference_hours": 0.07,
+          "temporal_match_status": "MATCHED"
+        },
+        {
+          "event_id": "EVT-MAHANADI-2024-08",
+          "sar_date": "2024-08-05",
+          "observed_extent_sqkm": 112.0,
+          "predicted_extent_sqkm": 116.2,
+          "iou": 0.791,
+          "f1": 0.883,
+          "time_difference_hours": 0.25,
+          "temporal_match_status": "MATCHED"
+        }
+      ]
+    }
+  },
+  "extent_vs_depth_clarification": "Sentinel-1 SAR provides 2D surface water extent masks. Depth validation (0-0.3m, 0.3-1m, 1-2m, >2m) is evaluated as MODEL_ESTIMATE with DEPTH_VALIDATION = UNAVAILABLE."
+}

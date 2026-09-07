@@ -1,0 +1,1 @@
+{"audit_id":"AUD-a39d4a","timestamp":"2026-09-07T05:28:18.406150+00:00","operator_id":"Duty Disaster Officer","operator_role":"OPERATOR","action":"ACKNOWLEDGE","previous_state":"CANDIDATE","new_state":"ACKNOWLEDGED","reason":"Action ACKNOWLEDGE executed by Duty Disaster Officer (OPERATOR)","evidence_snapshot_hash":null}

@@ -1,0 +1,1729 @@
+{
+  "evaluation_timestamp": "2026-08-27T05:54:24.826200+00:00",
+  "evaluation_partition": "HELD_OUT_TEST",
+  "held_out_events": [
+    "EVT-MAHANADI-2022-08",
+    "EVT-MAHANADI-2024-08"
+  ],
+  "HELD_OUT_TEST_EVENT_COUNT": 2,
+  "HELD_OUT_TEST_SEQUENCE_COUNT": 1170,
+  "test_samples_count": 1170,
+  "lead_time_horizons": [
+    "30m",
+    "1h",
+    "2h",
+    "3h",
+    "4h",
+    "5h",
+    "6h"
+  ],
+  "thresholds_evaluated_mm_hr": [
+    5.0,
+    15.0,
+    35.0,
+    65.0
+  ],
+  "models": {
+    "L0_PERSISTENCE": {
+      "overall": {
+        "mae_mm": 8.798,
+        "rmse_mm": 13.479,
+        "thresholds": {
+          "5mm": {
+            "threshold_mm_hr": 5.0,
+            "csi": 0.7849,
+            "pod": 0.875,
+            "far": 0.116,
+            "hits": 3752457,
+            "false_alarms": 492339,
+            "misses": 535975
+          },
+          "15mm": {
+            "threshold_mm_hr": 15.0,
+            "csi": 0.3527,
+            "pod": 0.5043,
+            "far": 0.4602,
+            "hits": 930045,
+            "false_alarms": 792783,
+            "misses": 914099
+          },
+          "35mm": {
+            "threshold_mm_hr": 35.0,
+            "csi": 0.1894,
+            "pod": 0.2842,
+            "far": 0.6378,
+            "hits": 105894,
+            "false_alarms": 186498,
+            "misses": 266716
+          },
+          "65mm": {
+            "threshold_mm_hr": 65.0,
+            "csi": 0.008,
+            "pod": 0.0142,
+            "far": 0.9821,
+            "hits": 227,
+            "false_alarms": 12445,
+            "misses": 15728
+          }
+        }
+      },
+      "horizons": {
+        "30m": {
+          "mae_mm": 6.303,
+          "rmse_mm": 11.342,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.7816,
+              "pod": 0.8765,
+              "far": 0.1217,
+              "hits": 310674,
+              "false_alarms": 43059,
+              "misses": 43763
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.4884,
+              "pod": 0.6523,
+              "far": 0.3397,
+              "hits": 94800,
+              "false_alarms": 48769,
+              "misses": 50532
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.369,
+              "pod": 0.5266,
+              "far": 0.4479,
+              "hits": 13453,
+              "false_alarms": 10913,
+              "misses": 12095
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 1.0,
+              "hits": 0,
+              "false_alarms": 1056,
+              "misses": 1126
+            }
+          }
+        },
+        "1h": {
+          "mae_mm": 6.903,
+          "rmse_mm": 11.778,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.7793,
+              "pod": 0.8746,
+              "far": 0.1227,
+              "hits": 310316,
+              "false_alarms": 43417,
+              "misses": 44478
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.4517,
+              "pod": 0.6146,
+              "far": 0.3697,
+              "hits": 90488,
+              "false_alarms": 53081,
+              "misses": 56738
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.3289,
+              "pod": 0.4724,
+              "far": 0.4801,
+              "hits": 12667,
+              "false_alarms": 11699,
+              "misses": 14145
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0104,
+              "pod": 0.0195,
+              "far": 0.9782,
+              "hits": 23,
+              "false_alarms": 1033,
+              "misses": 1155
+            }
+          }
+        },
+        "2h": {
+          "mae_mm": 7.677,
+          "rmse_mm": 12.332,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.7966,
+              "pod": 0.8836,
+              "far": 0.1099,
+              "hits": 314845,
+              "false_alarms": 38888,
+              "misses": 41488
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.4095,
+              "pod": 0.5664,
+              "far": 0.4034,
+              "hits": 85648,
+              "false_alarms": 57921,
+              "misses": 65570
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.2631,
+              "pod": 0.3825,
+              "far": 0.5427,
+              "hits": 11142,
+              "false_alarms": 13224,
+              "misses": 17989
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.003,
+              "pod": 0.0055,
+              "far": 0.9934,
+              "hits": 7,
+              "false_alarms": 1049,
+              "misses": 1271
+            }
+          }
+        },
+        "3h": {
+          "mae_mm": 8.846,
+          "rmse_mm": 13.388,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.7777,
+              "pod": 0.8702,
+              "far": 0.1202,
+              "hits": 311204,
+              "false_alarms": 42529,
+              "misses": 46415
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.3562,
+              "pod": 0.5068,
+              "far": 0.4549,
+              "hits": 78258,
+              "false_alarms": 65311,
+              "misses": 76149
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.1971,
+              "pod": 0.2931,
+              "far": 0.6245,
+              "hits": 9149,
+              "false_alarms": 15217,
+              "misses": 22061
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0195,
+              "pod": 0.0343,
+              "far": 0.9564,
+              "hits": 46,
+              "false_alarms": 1010,
+              "misses": 1297
+            }
+          }
+        },
+        "4h": {
+          "mae_mm": 9.739,
+          "rmse_mm": 14.339,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.7871,
+              "pod": 0.875,
+              "far": 0.1133,
+              "hits": 313666,
+              "false_alarms": 40067,
+              "misses": 44798
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.305,
+              "pod": 0.4484,
+              "far": 0.5118,
+              "hits": 70086,
+              "false_alarms": 73483,
+              "misses": 86222
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.1414,
+              "pod": 0.2158,
+              "far": 0.7092,
+              "hits": 7085,
+              "false_alarms": 17281,
+              "misses": 25753
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0057,
+              "pod": 0.0101,
+              "far": 0.9867,
+              "hits": 14,
+              "false_alarms": 1042,
+              "misses": 1379
+            }
+          }
+        },
+        "5h": {
+          "mae_mm": 10.231,
+          "rmse_mm": 14.647,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.7882,
+              "pod": 0.8754,
+              "far": 0.1121,
+              "hits": 314069,
+              "false_alarms": 39664,
+              "misses": 44710
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.2867,
+              "pod": 0.4254,
+              "far": 0.5322,
+              "hits": 67166,
+              "false_alarms": 76403,
+              "misses": 90719
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.1108,
+              "pod": 0.1712,
+              "far": 0.761,
+              "hits": 5824,
+              "false_alarms": 18542,
+              "misses": 28194
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.011,
+              "pod": 0.0189,
+              "far": 0.9744,
+              "hits": 27,
+              "false_alarms": 1029,
+              "misses": 1403
+            }
+          }
+        },
+        "6h": {
+          "mae_mm": 10.799,
+          "rmse_mm": 15.272,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.7816,
+              "pod": 0.8706,
+              "far": 0.1157,
+              "hits": 312797,
+              "false_alarms": 40936,
+              "misses": 46483
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.2557,
+              "pod": 0.3881,
+              "far": 0.5716,
+              "hits": 61511,
+              "false_alarms": 82058,
+              "misses": 96992
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.0825,
+              "pod": 0.1295,
+              "far": 0.8146,
+              "hits": 4517,
+              "false_alarms": 19849,
+              "misses": 30374
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 1.0,
+              "hits": 0,
+              "false_alarms": 1056,
+              "misses": 1448
+            }
+          }
+        }
+      }
+    },
+    "L1_ADVECTION": {
+      "overall": {
+        "mae_mm": 8.561,
+        "rmse_mm": 12.948,
+        "thresholds": {
+          "5mm": {
+            "threshold_mm_hr": 5.0,
+            "csi": 0.7476,
+            "pod": 0.8258,
+            "far": 0.1125,
+            "hits": 3541501,
+            "false_alarms": 448795,
+            "misses": 746931
+          },
+          "15mm": {
+            "threshold_mm_hr": 15.0,
+            "csi": 0.3356,
+            "pod": 0.4499,
+            "far": 0.4308,
+            "hits": 829640,
+            "false_alarms": 627807,
+            "misses": 1014504
+          },
+          "35mm": {
+            "threshold_mm_hr": 35.0,
+            "csi": 0.1475,
+            "pod": 0.1918,
+            "far": 0.6107,
+            "hits": 71478,
+            "false_alarms": 112146,
+            "misses": 301132
+          },
+          "65mm": {
+            "threshold_mm_hr": 65.0,
+            "csi": 0.0042,
+            "pod": 0.0059,
+            "far": 0.9852,
+            "hits": 94,
+            "false_alarms": 6272,
+            "misses": 15861
+          }
+        }
+      },
+      "horizons": {
+        "30m": {
+          "mae_mm": 6.331,
+          "rmse_mm": 11.217,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.776,
+              "pod": 0.869,
+              "far": 0.1213,
+              "hits": 308018,
+              "false_alarms": 42513,
+              "misses": 46419
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.4858,
+              "pod": 0.641,
+              "far": 0.3327,
+              "hits": 93163,
+              "false_alarms": 46445,
+              "misses": 52169
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.3541,
+              "pod": 0.4944,
+              "far": 0.4449,
+              "hits": 12631,
+              "false_alarms": 10122,
+              "misses": 12917
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 1.0,
+              "hits": 0,
+              "false_alarms": 961,
+              "misses": 1126
+            }
+          }
+        },
+        "1h": {
+          "mae_mm": 6.897,
+          "rmse_mm": 11.55,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.7696,
+              "pod": 0.8617,
+              "far": 0.1219,
+              "hits": 305724,
+              "false_alarms": 42456,
+              "misses": 49070
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.4493,
+              "pod": 0.596,
+              "far": 0.354,
+              "hits": 87743,
+              "false_alarms": 48078,
+              "misses": 59483
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.2969,
+              "pod": 0.4083,
+              "far": 0.4788,
+              "hits": 10948,
+              "false_alarms": 10058,
+              "misses": 15864
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.004,
+              "pod": 0.0068,
+              "far": 0.9905,
+              "hits": 8,
+              "false_alarms": 834,
+              "misses": 1170
+            }
+          }
+        },
+        "2h": {
+          "mae_mm": 7.635,
+          "rmse_mm": 11.963,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.7769,
+              "pod": 0.8579,
+              "far": 0.1084,
+              "hits": 305684,
+              "false_alarms": 37154,
+              "misses": 50649
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.403,
+              "pod": 0.5319,
+              "far": 0.3755,
+              "hits": 80427,
+              "false_alarms": 48369,
+              "misses": 70791
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.2205,
+              "pod": 0.2936,
+              "far": 0.5303,
+              "hits": 8553,
+              "false_alarms": 9656,
+              "misses": 20578
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 1.0,
+              "hits": 0,
+              "false_alarms": 665,
+              "misses": 1278
+            }
+          }
+        },
+        "3h": {
+          "mae_mm": 8.714,
+          "rmse_mm": 12.88,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.7449,
+              "pod": 0.8267,
+              "far": 0.1172,
+              "hits": 295634,
+              "false_alarms": 39243,
+              "misses": 61985
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.3419,
+              "pod": 0.4562,
+              "far": 0.4229,
+              "hits": 70434,
+              "false_alarms": 51608,
+              "misses": 83973
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.1363,
+              "pod": 0.1793,
+              "far": 0.6377,
+              "hits": 5595,
+              "false_alarms": 9846,
+              "misses": 25615
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0087,
+              "pod": 0.0119,
+              "far": 0.9691,
+              "hits": 16,
+              "false_alarms": 501,
+              "misses": 1327
+            }
+          }
+        },
+        "4h": {
+          "mae_mm": 9.477,
+          "rmse_mm": 13.683,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.7453,
+              "pod": 0.8175,
+              "far": 0.1059,
+              "hits": 293043,
+              "false_alarms": 34704,
+              "misses": 65421
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.2805,
+              "pod": 0.3817,
+              "far": 0.486,
+              "hits": 59662,
+              "false_alarms": 56416,
+              "misses": 96646
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.0859,
+              "pod": 0.111,
+              "far": 0.725,
+              "hits": 3646,
+              "false_alarms": 9612,
+              "misses": 29192
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 1.0,
+              "hits": 0,
+              "false_alarms": 404,
+              "misses": 1393
+            }
+          }
+        },
+        "5h": {
+          "mae_mm": 9.784,
+          "rmse_mm": 13.937,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.7332,
+              "pod": 0.8019,
+              "far": 0.1046,
+              "hits": 287710,
+              "false_alarms": 33603,
+              "misses": 71069
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.2489,
+              "pod": 0.3396,
+              "far": 0.5175,
+              "hits": 53618,
+              "false_alarms": 57513,
+              "misses": 104267
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.0533,
+              "pod": 0.0671,
+              "far": 0.7935,
+              "hits": 2281,
+              "false_alarms": 8765,
+              "misses": 31737
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0006,
+              "pod": 0.0007,
+              "far": 0.9968,
+              "hits": 1,
+              "false_alarms": 311,
+              "misses": 1429
+            }
+          }
+        },
+        "6h": {
+          "mae_mm": 10.069,
+          "rmse_mm": 14.451,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.7068,
+              "pod": 0.7726,
+              "far": 0.1075,
+              "hits": 277581,
+              "false_alarms": 33435,
+              "misses": 81699
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.2221,
+              "pod": 0.303,
+              "far": 0.5456,
+              "hits": 48020,
+              "false_alarms": 57663,
+              "misses": 110483
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.0286,
+              "pod": 0.0351,
+              "far": 0.8654,
+              "hits": 1223,
+              "false_alarms": 7862,
+              "misses": 33668
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 1.0,
+              "hits": 0,
+              "false_alarms": 237,
+              "misses": 1448
+            }
+          }
+        }
+      }
+    },
+    "L2_GRADIENT_BOOSTED": {
+      "overall": {
+        "mae_mm": 9.953,
+        "rmse_mm": 14.599,
+        "thresholds": {
+          "5mm": {
+            "threshold_mm_hr": 5.0,
+            "csi": 0.5742,
+            "pod": 0.6203,
+            "far": 0.1146,
+            "hits": 2660029,
+            "false_alarms": 344179,
+            "misses": 1628403
+          },
+          "15mm": {
+            "threshold_mm_hr": 15.0,
+            "csi": 0.2537,
+            "pod": 0.3163,
+            "far": 0.4384,
+            "hits": 583332,
+            "false_alarms": 455441,
+            "misses": 1260812
+          },
+          "35mm": {
+            "threshold_mm_hr": 35.0,
+            "csi": 0.0631,
+            "pod": 0.0832,
+            "far": 0.7927,
+            "hits": 31011,
+            "false_alarms": 118556,
+            "misses": 341599
+          },
+          "65mm": {
+            "threshold_mm_hr": 65.0,
+            "csi": 0.0089,
+            "pod": 0.0172,
+            "far": 0.9819,
+            "hits": 274,
+            "false_alarms": 14899,
+            "misses": 15681
+          }
+        }
+      },
+      "horizons": {
+        "30m": {
+          "mae_mm": 8.564,
+          "rmse_mm": 13.941,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.6867,
+              "pod": 0.7555,
+              "far": 0.1172,
+              "hits": 267787,
+              "false_alarms": 35551,
+              "misses": 86650
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.4286,
+              "pod": 0.5606,
+              "far": 0.3545,
+              "hits": 81470,
+              "false_alarms": 44739,
+              "misses": 63862
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.1809,
+              "pod": 0.3143,
+              "far": 0.7011,
+              "hits": 8030,
+              "false_alarms": 18839,
+              "misses": 17518
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0132,
+              "pod": 0.0515,
+              "far": 0.9826,
+              "hits": 58,
+              "false_alarms": 3276,
+              "misses": 1068
+            }
+          }
+        },
+        "1h": {
+          "mae_mm": 9.092,
+          "rmse_mm": 13.99,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.6617,
+              "pod": 0.7297,
+              "far": 0.1233,
+              "hits": 258882,
+              "false_alarms": 36418,
+              "misses": 95912
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.3901,
+              "pod": 0.5128,
+              "far": 0.3803,
+              "hits": 75503,
+              "false_alarms": 46344,
+              "misses": 71723
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.1425,
+              "pod": 0.232,
+              "far": 0.7302,
+              "hits": 6221,
+              "false_alarms": 16835,
+              "misses": 20591
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0077,
+              "pod": 0.0255,
+              "far": 0.9891,
+              "hits": 30,
+              "false_alarms": 2728,
+              "misses": 1148
+            }
+          }
+        },
+        "2h": {
+          "mae_mm": 9.402,
+          "rmse_mm": 13.973,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.6439,
+              "pod": 0.6958,
+              "far": 0.1039,
+              "hits": 247937,
+              "false_alarms": 28739,
+              "misses": 108396
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.3459,
+              "pod": 0.4478,
+              "far": 0.3969,
+              "hits": 67718,
+              "false_alarms": 44567,
+              "misses": 83500
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.0873,
+              "pod": 0.1278,
+              "far": 0.7841,
+              "hits": 3724,
+              "false_alarms": 13526,
+              "misses": 25407
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0032,
+              "pod": 0.0078,
+              "far": 0.9945,
+              "hits": 10,
+              "false_alarms": 1803,
+              "misses": 1268
+            }
+          }
+        },
+        "3h": {
+          "mae_mm": 10.122,
+          "rmse_mm": 14.465,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.5946,
+              "pod": 0.644,
+              "far": 0.1143,
+              "hits": 230305,
+              "false_alarms": 29718,
+              "misses": 127314
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.2382,
+              "pod": 0.3093,
+              "far": 0.4913,
+              "hits": 47764,
+              "false_alarms": 46131,
+              "misses": 106643
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.0364,
+              "pod": 0.0487,
+              "far": 0.8742,
+              "hits": 1521,
+              "false_alarms": 10572,
+              "misses": 29689
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.019,
+              "pod": 0.0343,
+              "far": 0.9593,
+              "hits": 46,
+              "false_alarms": 1084,
+              "misses": 1297
+            }
+          }
+        },
+        "4h": {
+          "mae_mm": 10.642,
+          "rmse_mm": 15.013,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.5479,
+              "pod": 0.5889,
+              "far": 0.1128,
+              "hits": 211091,
+              "false_alarms": 26835,
+              "misses": 147373
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.1626,
+              "pod": 0.2015,
+              "far": 0.5432,
+              "hits": 31502,
+              "false_alarms": 37465,
+              "misses": 124806
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.0187,
+              "pod": 0.0227,
+              "far": 0.9023,
+              "hits": 744,
+              "false_alarms": 6871,
+              "misses": 32094
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.004,
+              "pod": 0.0057,
+              "far": 0.9872,
+              "hits": 8,
+              "false_alarms": 615,
+              "misses": 1385
+            }
+          }
+        },
+        "5h": {
+          "mae_mm": 10.608,
+          "rmse_mm": 15.177,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.5002,
+              "pod": 0.5334,
+              "far": 0.1105,
+              "hits": 191369,
+              "false_alarms": 23783,
+              "misses": 167410
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.1517,
+              "pod": 0.1784,
+              "far": 0.4963,
+              "hits": 28159,
+              "false_alarms": 27745,
+              "misses": 129726
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.016,
+              "pod": 0.018,
+              "far": 0.8779,
+              "hits": 613,
+              "false_alarms": 4407,
+              "misses": 33405
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0023,
+              "pod": 0.0028,
+              "far": 0.9869,
+              "hits": 4,
+              "false_alarms": 302,
+              "misses": 1426
+            }
+          }
+        },
+        "6h": {
+          "mae_mm": 10.757,
+          "rmse_mm": 15.599,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.4325,
+              "pod": 0.4605,
+              "far": 0.1233,
+              "hits": 165437,
+              "false_alarms": 23258,
+              "misses": 193843
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.1262,
+              "pod": 0.143,
+              "far": 0.4823,
+              "hits": 22673,
+              "false_alarms": 21119,
+              "misses": 135830
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.0103,
+              "pod": 0.0111,
+              "far": 0.8699,
+              "hits": 387,
+              "false_alarms": 2588,
+              "misses": 34504
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 1.0,
+              "hits": 0,
+              "false_alarms": 61,
+              "misses": 1448
+            }
+          }
+        }
+      }
+    },
+    "L3_ANALYTICAL_SURROGATE": {
+      "overall": {
+        "mae_mm": 8.616,
+        "rmse_mm": 13.014,
+        "thresholds": {
+          "5mm": {
+            "threshold_mm_hr": 5.0,
+            "csi": 0.707,
+            "pod": 0.779,
+            "far": 0.1156,
+            "hits": 3340700,
+            "false_alarms": 436560,
+            "misses": 947732
+          },
+          "15mm": {
+            "threshold_mm_hr": 15.0,
+            "csi": 0.3085,
+            "pod": 0.3999,
+            "far": 0.4256,
+            "hits": 737479,
+            "false_alarms": 546361,
+            "misses": 1106665
+          },
+          "35mm": {
+            "threshold_mm_hr": 35.0,
+            "csi": 0.1264,
+            "pod": 0.1538,
+            "far": 0.5857,
+            "hits": 57324,
+            "false_alarms": 81031,
+            "misses": 315286
+          },
+          "65mm": {
+            "threshold_mm_hr": 65.0,
+            "csi": 0.0029,
+            "pod": 0.0037,
+            "far": 0.9871,
+            "hits": 59,
+            "false_alarms": 4501,
+            "misses": 15896
+          }
+        }
+      },
+      "horizons": {
+        "30m": {
+          "mae_mm": 6.29,
+          "rmse_mm": 11.124,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.7852,
+              "pod": 0.891,
+              "far": 0.1313,
+              "hits": 315787,
+              "false_alarms": 47743,
+              "misses": 38650
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.4883,
+              "pod": 0.6516,
+              "far": 0.3392,
+              "hits": 94700,
+              "false_alarms": 48614,
+              "misses": 50632
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.3541,
+              "pod": 0.4944,
+              "far": 0.4449,
+              "hits": 12631,
+              "false_alarms": 10123,
+              "misses": 12917
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 1.0,
+              "hits": 0,
+              "false_alarms": 927,
+              "misses": 1126
+            }
+          }
+        },
+        "1h": {
+          "mae_mm": 6.869,
+          "rmse_mm": 11.359,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.7973,
+              "pod": 0.9044,
+              "far": 0.1293,
+              "hits": 320874,
+              "false_alarms": 47657,
+              "misses": 33920
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.452,
+              "pod": 0.6115,
+              "far": 0.3658,
+              "hits": 90024,
+              "false_alarms": 51924,
+              "misses": 57202
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.2935,
+              "pod": 0.403,
+              "far": 0.4806,
+              "hits": 10804,
+              "false_alarms": 9995,
+              "misses": 16008
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0031,
+              "pod": 0.0051,
+              "far": 0.9924,
+              "hits": 6,
+              "false_alarms": 780,
+              "misses": 1172
+            }
+          }
+        },
+        "2h": {
+          "mae_mm": 7.509,
+          "rmse_mm": 11.614,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.8164,
+              "pod": 0.9166,
+              "far": 0.1181,
+              "hits": 326606,
+              "false_alarms": 43746,
+              "misses": 29727
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.4061,
+              "pod": 0.5453,
+              "far": 0.3859,
+              "hits": 82458,
+              "false_alarms": 51815,
+              "misses": 68760
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.2113,
+              "pod": 0.2761,
+              "far": 0.5262,
+              "hits": 8043,
+              "false_alarms": 8931,
+              "misses": 21088
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 1.0,
+              "hits": 0,
+              "false_alarms": 539,
+              "misses": 1278
+            }
+          }
+        },
+        "3h": {
+          "mae_mm": 8.554,
+          "rmse_mm": 12.539,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.7729,
+              "pod": 0.8633,
+              "far": 0.1194,
+              "hits": 308747,
+              "false_alarms": 41861,
+              "misses": 48872
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.3376,
+              "pod": 0.4458,
+              "far": 0.4182,
+              "hits": 68834,
+              "false_alarms": 49487,
+              "misses": 85573
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.1089,
+              "pod": 0.1374,
+              "far": 0.6556,
+              "hits": 4288,
+              "false_alarms": 8162,
+              "misses": 26922
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 1.0,
+              "hits": 0,
+              "false_alarms": 347,
+              "misses": 1343
+            }
+          }
+        },
+        "4h": {
+          "mae_mm": 9.513,
+          "rmse_mm": 13.668,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.7021,
+              "pod": 0.7626,
+              "far": 0.1015,
+              "hits": 273364,
+              "false_alarms": 30885,
+              "misses": 85100
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.2618,
+              "pod": 0.3432,
+              "far": 0.4754,
+              "hits": 53641,
+              "false_alarms": 48611,
+              "misses": 102667
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.0397,
+              "pod": 0.0471,
+              "far": 0.7992,
+              "hits": 1546,
+              "false_alarms": 6153,
+              "misses": 31292
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 1.0,
+              "hits": 0,
+              "false_alarms": 196,
+              "misses": 1393
+            }
+          }
+        },
+        "5h": {
+          "mae_mm": 10.105,
+          "rmse_mm": 14.453,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.5851,
+              "pod": 0.6252,
+              "far": 0.0988,
+              "hits": 224313,
+              "false_alarms": 24587,
+              "misses": 134466
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.1471,
+              "pod": 0.1866,
+              "far": 0.5896,
+              "hits": 29459,
+              "false_alarms": 42315,
+              "misses": 128426
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.0082,
+              "pod": 0.0091,
+              "far": 0.9222,
+              "hits": 308,
+              "false_alarms": 3652,
+              "misses": 33710
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 1.0,
+              "hits": 0,
+              "false_alarms": 119,
+              "misses": 1430
+            }
+          }
+        },
+        "6h": {
+          "mae_mm": 10.497,
+          "rmse_mm": 15.236,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.4885,
+              "pod": 0.5155,
+              "far": 0.0971,
+              "hits": 185226,
+              "false_alarms": 19927,
+              "misses": 174054
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.1306,
+              "pod": 0.1537,
+              "far": 0.5345,
+              "hits": 24361,
+              "false_alarms": 27968,
+              "misses": 134142
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.0047,
+              "pod": 0.005,
+              "far": 0.9164,
+              "hits": 174,
+              "false_alarms": 1907,
+              "misses": 34717
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 1.0,
+              "hits": 0,
+              "false_alarms": 71,
+              "misses": 1448
+            }
+          }
+        }
+      }
+    },
+    "L3_PYTORCH_CONVLSTM": {
+      "overall": {
+        "mae_mm": 13.012,
+        "rmse_mm": 17.752,
+        "thresholds": {
+          "5mm": {
+            "threshold_mm_hr": 5.0,
+            "csi": 0.0163,
+            "pod": 0.0163,
+            "far": 0.0,
+            "hits": 70095,
+            "false_alarms": 2,
+            "misses": 4218337
+          },
+          "15mm": {
+            "threshold_mm_hr": 15.0,
+            "csi": 0.0,
+            "pod": 0.0,
+            "far": 0.0,
+            "hits": 0,
+            "false_alarms": 0,
+            "misses": 1844144
+          },
+          "35mm": {
+            "threshold_mm_hr": 35.0,
+            "csi": 0.0,
+            "pod": 0.0,
+            "far": 0.0,
+            "hits": 0,
+            "false_alarms": 0,
+            "misses": 372610
+          },
+          "65mm": {
+            "threshold_mm_hr": 65.0,
+            "csi": 0.0,
+            "pod": 0.0,
+            "far": 0.0,
+            "hits": 0,
+            "false_alarms": 0,
+            "misses": 15955
+          }
+        }
+      },
+      "horizons": {
+        "30m": {
+          "mae_mm": 12.984,
+          "rmse_mm": 17.474,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.0002,
+              "pod": 0.0002,
+              "far": 0.0,
+              "hits": 77,
+              "false_alarms": 0,
+              "misses": 354360
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 0.0,
+              "hits": 0,
+              "false_alarms": 0,
+              "misses": 145332
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 0.0,
+              "hits": 0,
+              "false_alarms": 0,
+              "misses": 25548
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 0.0,
+              "hits": 0,
+              "false_alarms": 0,
+              "misses": 1126
+            }
+          }
+        },
+        "1h": {
+          "mae_mm": 13.068,
+          "rmse_mm": 17.608,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.0029,
+              "pod": 0.0029,
+              "far": 0.0,
+              "hits": 1014,
+              "false_alarms": 0,
+              "misses": 353780
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 0.0,
+              "hits": 0,
+              "false_alarms": 0,
+              "misses": 147226
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 0.0,
+              "hits": 0,
+              "false_alarms": 0,
+              "misses": 26812
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 0.0,
+              "hits": 0,
+              "false_alarms": 0,
+              "misses": 1178
+            }
+          }
+        },
+        "2h": {
+          "mae_mm": 12.844,
+          "rmse_mm": 17.507,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.0098,
+              "pod": 0.0098,
+              "far": 0.0,
+              "hits": 3501,
+              "false_alarms": 0,
+              "misses": 352832
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 0.0,
+              "hits": 0,
+              "false_alarms": 0,
+              "misses": 151218
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 0.0,
+              "hits": 0,
+              "false_alarms": 0,
+              "misses": 29131
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 0.0,
+              "hits": 0,
+              "false_alarms": 0,
+              "misses": 1278
+            }
+          }
+        },
+        "3h": {
+          "mae_mm": 12.904,
+          "rmse_mm": 17.654,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.0161,
+              "pod": 0.0161,
+              "far": 0.0,
+              "hits": 5746,
+              "false_alarms": 0,
+              "misses": 351873
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 0.0,
+              "hits": 0,
+              "false_alarms": 0,
+              "misses": 154407
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 0.0,
+              "hits": 0,
+              "false_alarms": 0,
+              "misses": 31210
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 0.0,
+              "hits": 0,
+              "false_alarms": 0,
+              "misses": 1343
+            }
+          }
+        },
+        "4h": {
+          "mae_mm": 13.021,
+          "rmse_mm": 17.835,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.0213,
+              "pod": 0.0213,
+              "far": 0.0,
+              "hits": 7636,
+              "false_alarms": 0,
+              "misses": 350828
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 0.0,
+              "hits": 0,
+              "false_alarms": 0,
+              "misses": 156308
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 0.0,
+              "hits": 0,
+              "false_alarms": 0,
+              "misses": 32838
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 0.0,
+              "hits": 0,
+              "false_alarms": 0,
+              "misses": 1393
+            }
+          }
+        },
+        "5h": {
+          "mae_mm": 13.122,
+          "rmse_mm": 17.991,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.0258,
+              "pod": 0.0258,
+              "far": 0.0,
+              "hits": 9272,
+              "false_alarms": 0,
+              "misses": 349507
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 0.0,
+              "hits": 0,
+              "false_alarms": 0,
+              "misses": 157885
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 0.0,
+              "hits": 0,
+              "false_alarms": 0,
+              "misses": 34018
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 0.0,
+              "hits": 0,
+              "false_alarms": 0,
+              "misses": 1430
+            }
+          }
+        },
+        "6h": {
+          "mae_mm": 13.197,
+          "rmse_mm": 18.106,
+          "thresholds": {
+            "5mm": {
+              "threshold_mm_hr": 5.0,
+              "csi": 0.0295,
+              "pod": 0.0295,
+              "far": 0.0,
+              "hits": 10614,
+              "false_alarms": 0,
+              "misses": 348666
+            },
+            "15mm": {
+              "threshold_mm_hr": 15.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 0.0,
+              "hits": 0,
+              "false_alarms": 0,
+              "misses": 158503
+            },
+            "35mm": {
+              "threshold_mm_hr": 35.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 0.0,
+              "hits": 0,
+              "false_alarms": 0,
+              "misses": 34891
+            },
+            "65mm": {
+              "threshold_mm_hr": 65.0,
+              "csi": 0.0,
+              "pod": 0.0,
+              "far": 0.0,
+              "hits": 0,
+              "false_alarms": 0,
+              "misses": 1448
+            }
+          }
+        }
+      }
+    }
+  },
+  "scientific_disclaimer": "Evaluated strictly on held-out test events without test-set tuning. Note: 1170 evaluated sequences represent sliding spatiotemporal windows across 2 distinct held-out flood events, not 1170 independent events."
+}

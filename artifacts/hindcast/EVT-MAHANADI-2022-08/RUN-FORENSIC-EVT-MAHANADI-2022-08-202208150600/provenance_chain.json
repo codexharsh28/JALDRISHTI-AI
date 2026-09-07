@@ -1,0 +1,53 @@
+{
+  "run_id": "RUN-FORENSIC-EVT-MAHANADI-2022-08-202208150600",
+  "event_id": "EVT-MAHANADI-2022-08",
+  "stages": [
+    {
+      "stage": "RAW_IMD_GRIDDED",
+      "file": "data/historical/imd_gridded_025_EVT-MAHANADI-2022-08.csv",
+      "sha256": "848fbe25cdaef989a9a044519228fb410d7236e907106b8ad2cc5e712fed9493"
+    },
+    {
+      "stage": "RAW_GPM_IMERG",
+      "file": "data/historical/gpm_imerg_v07b_EVT-MAHANADI-2022-08.csv",
+      "sha256": "45921ad24c91d546eff2d81a53e0ae125c7826df93126e30b147efb441a7456b"
+    },
+    {
+      "stage": "QC_AND_AVAILABILITY_GATING",
+      "records_validated": 216,
+      "anti_leakage_enforced": true
+    },
+    {
+      "stage": "FEATURE_SNAPSHOT",
+      "sha256": "16b1e7d14db4aa647c23c11fc29cf1f792af3d9ebe1b23f203b07600a7122e8c"
+    },
+    {
+      "stage": "MODEL_INFERENCE",
+      "model_id": "MOD-HYDRO-L2-LSTM-RIVER-GRAPH",
+      "version": "v2.4"
+    },
+    {
+      "stage": "CALIBRATION",
+      "quantiles": [
+        "p10",
+        "p50",
+        "p90"
+      ],
+      "calibration_method": "Empirical Residual Quantiles"
+    },
+    {
+      "stage": "FORECAST_OUTPUT",
+      "sha256": "1fd6c226737a421b1dd2525a9d74319434a4f83d1ee12dde059919616a632a65"
+    },
+    {
+      "stage": "INUNDATION_SURROGATE",
+      "sar_reference_acquisition": "2022-08-17"
+    },
+    {
+      "stage": "ALERT_DISPATCH",
+      "severity": "RED",
+      "lead_time_hours": 22.0
+    }
+  ],
+  "provenance_hash": "342068f066617ba7e117a2f0f2efecd2f25bc01e3c05e8751a09af0ce39db759"
+}

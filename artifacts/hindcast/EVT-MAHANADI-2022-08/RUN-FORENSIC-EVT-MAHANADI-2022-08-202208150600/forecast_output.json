@@ -1,0 +1,85 @@
+{
+  "hindcast_run_id": "HINDCAST-EVT-MAHANADI-2022-08-202208150600-92c960",
+  "event_id": "EVT-MAHANADI-2022-08",
+  "cutoff_issuance_time": "2022-08-15T06:00:00+00:00",
+  "visible_historical_records_count": 213,
+  "information_cutoff_enforced": true,
+  "dataset_state": "REAL_HISTORICAL_HINDCAST",
+  "models_evaluated": [
+    "L0_PERSISTENCE",
+    "L1_XGBOOST",
+    "L2_LSTM_RIVER_GRAPH"
+  ],
+  "current_stage_m": 22.4,
+  "danger_stage_m": 26.41,
+  "peak_predicted_stage_m": 22.77,
+  "peak_exceeds_danger": false,
+  "alert_severity": "GREEN",
+  "alert_lead_time_hours": 0.0,
+  "forecast_horizons": {
+    "1h": {
+      "lead_time_hours": 1,
+      "valid_time": "2022-08-15T07:00:00+00:00",
+      "L0_PERSISTENCE": 22.4,
+      "L1_XGBOOST": 22.44,
+      "L2_LSTM_RIVER_GRAPH_P50": 22.41,
+      "L2_LSTM_RIVER_GRAPH_P10": 22.4,
+      "L2_LSTM_RIVER_GRAPH_P90": 22.72
+    },
+    "3h": {
+      "lead_time_hours": 3,
+      "valid_time": "2022-08-15T09:00:00+00:00",
+      "L0_PERSISTENCE": 22.4,
+      "L1_XGBOOST": 22.55,
+      "L2_LSTM_RIVER_GRAPH_P50": 22.47,
+      "L2_LSTM_RIVER_GRAPH_P10": 22.4,
+      "L2_LSTM_RIVER_GRAPH_P90": 22.79
+    },
+    "6h": {
+      "lead_time_hours": 6,
+      "valid_time": "2022-08-15T12:00:00+00:00",
+      "L0_PERSISTENCE": 22.4,
+      "L1_XGBOOST": 22.71,
+      "L2_LSTM_RIVER_GRAPH_P50": 22.6,
+      "L2_LSTM_RIVER_GRAPH_P10": 22.4,
+      "L2_LSTM_RIVER_GRAPH_P90": 22.94
+    },
+    "12h": {
+      "lead_time_hours": 12,
+      "valid_time": "2022-08-15T18:00:00+00:00",
+      "L0_PERSISTENCE": 22.4,
+      "L1_XGBOOST": 22.83,
+      "L2_LSTM_RIVER_GRAPH_P50": 22.77,
+      "L2_LSTM_RIVER_GRAPH_P10": 22.45,
+      "L2_LSTM_RIVER_GRAPH_P90": 23.15
+    },
+    "24h": {
+      "lead_time_hours": 24,
+      "valid_time": "2022-08-16T06:00:00+00:00",
+      "L0_PERSISTENCE": 22.4,
+      "L1_XGBOOST": 22.49,
+      "L2_LSTM_RIVER_GRAPH_P50": 22.67,
+      "L2_LSTM_RIVER_GRAPH_P10": 22.4,
+      "L2_LSTM_RIVER_GRAPH_P90": 23.13
+    },
+    "48h": {
+      "lead_time_hours": 48,
+      "valid_time": "2022-08-17T06:00:00+00:00",
+      "L0_PERSISTENCE": 22.4,
+      "L1_XGBOOST": 22.44,
+      "L2_LSTM_RIVER_GRAPH_P50": 22.48,
+      "L2_LSTM_RIVER_GRAPH_P10": 22.4,
+      "L2_LSTM_RIVER_GRAPH_P90": 23.11
+    },
+    "72h": {
+      "lead_time_hours": 72,
+      "valid_time": "2022-08-18T06:00:00+00:00",
+      "L0_PERSISTENCE": 22.4,
+      "L1_XGBOOST": 22.57,
+      "L2_LSTM_RIVER_GRAPH_P50": 22.42,
+      "L2_LSTM_RIVER_GRAPH_P10": 22.4,
+      "L2_LSTM_RIVER_GRAPH_P90": 23.22
+    }
+  },
+  "generated_at": "2026-09-04T09:45:47.692341+00:00"
+}

@@ -1,0 +1,130 @@
+{
+  "study_title": "JALDRISHTI AI 2D Inundation Feature Source Ablation Study",
+  "generated_at": "2026-08-27T05:07:46.081859+00:00",
+  "training_dataset": "data/simulation/inundation_samples_train.csv",
+  "evaluation_dataset": "data/simulation/inundation_samples_val.csv",
+  "total_configurations": 6,
+  "configurations": {
+    "Config_1_Terrain_Only": {
+      "name": "1. Terrain Only (HAND + DEM + Slope + Distance)",
+      "description": "Static topographic features without dynamic flood wave forcing",
+      "feature_count": 4,
+      "features": [
+        "dem_elevation_m",
+        "dem_slope_deg",
+        "hand_m",
+        "dist_river_km"
+      ],
+      "iou": 0.4819,
+      "f1": 0.6504,
+      "csi": 0.4819,
+      "precision": 0.5885,
+      "recall": 0.7268,
+      "brier_score": 0.1672,
+      "depth_rmse_m": 0.765
+    },
+    "Config_2_Terrain_Stage": {
+      "name": "2. Terrain + Stage Surcharge",
+      "description": "Topography coupled with river channel bankfull surcharge",
+      "feature_count": 5,
+      "features": [
+        "dem_elevation_m",
+        "dem_slope_deg",
+        "hand_m",
+        "dist_river_km",
+        "stage_surcharge_m"
+      ],
+      "iou": 0.5714,
+      "f1": 0.7273,
+      "csi": 0.5714,
+      "precision": 0.7574,
+      "recall": 0.6995,
+      "brier_score": 0.1262,
+      "depth_rmse_m": 0.327
+    },
+    "Config_3_Terrain_Rainfall": {
+      "name": "3. Terrain + Direct 24h Rainfall",
+      "description": "Topography coupled with direct pluvial precipitation",
+      "feature_count": 5,
+      "features": [
+        "dem_elevation_m",
+        "dem_slope_deg",
+        "hand_m",
+        "dist_river_km",
+        "rain_24h_mm"
+      ],
+      "iou": 0.4839,
+      "f1": 0.6522,
+      "csi": 0.4839,
+      "precision": 0.5844,
+      "recall": 0.7377,
+      "brier_score": 0.1641,
+      "depth_rmse_m": 0.746
+    },
+    "Config_4_Terrain_Stage_Rainfall": {
+      "name": "4. Terrain + Stage Surcharge + Rainfall",
+      "description": "Combined fluvial overtopping and pluvial ponding",
+      "feature_count": 6,
+      "features": [
+        "dem_elevation_m",
+        "dem_slope_deg",
+        "hand_m",
+        "dist_river_km",
+        "stage_surcharge_m",
+        "rain_24h_mm"
+      ],
+      "iou": 0.5513,
+      "f1": 0.7107,
+      "csi": 0.5513,
+      "precision": 0.7167,
+      "recall": 0.7049,
+      "brier_score": 0.1237,
+      "depth_rmse_m": 0.277
+    },
+    "Config_5_Terrain_Drainage": {
+      "name": "5. Terrain + Drainage Network Dynamics",
+      "description": "Incorporates upstream catchment accumulation and tributary density",
+      "feature_count": 8,
+      "features": [
+        "dem_elevation_m",
+        "dem_slope_deg",
+        "hand_m",
+        "dist_river_km",
+        "stage_surcharge_m",
+        "rain_24h_mm",
+        "flow_accumulation",
+        "drainage_density"
+      ],
+      "iou": 0.5536,
+      "f1": 0.7127,
+      "csi": 0.5536,
+      "precision": 0.7207,
+      "recall": 0.7049,
+      "brier_score": 0.1214,
+      "depth_rmse_m": 0.277
+    },
+    "Config_6_Full_Feature_Set": {
+      "name": "6. Full Multi-Source Physics Set",
+      "description": "Complete hydro-meteorological, topographic, and surface roughness feature fusion",
+      "feature_count": 9,
+      "features": [
+        "dem_elevation_m",
+        "dem_slope_deg",
+        "hand_m",
+        "dist_river_km",
+        "stage_surcharge_m",
+        "rain_24h_mm",
+        "flow_accumulation",
+        "drainage_density",
+        "manning_n_proxy"
+      ],
+      "iou": 0.5536,
+      "f1": 0.7127,
+      "csi": 0.5536,
+      "precision": 0.7207,
+      "recall": 0.7049,
+      "brier_score": 0.1218,
+      "depth_rmse_m": 0.279
+    }
+  }
+}

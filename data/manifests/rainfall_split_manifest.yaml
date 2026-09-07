@@ -1,0 +1,35 @@
+# JALDRISHTI AI — Event-Based Rainfall Partition Split Manifest
+manifest_version: "v1.0"
+updated_at: "2026-08-27T00:00:00Z"
+basin_id: "pilot-mahanadi-delta"
+
+description: >
+  Strict whole-event partitioning. Timesteps from events in VALIDATION and HELD_OUT_TEST
+  are strictly isolated from model training, normalization fitting, and bias calibration.
+
+splits:
+  TRAIN:
+    partition_name: "TRAIN"
+    description: "Used for model loss optimization, weight fitting, and bias calibration."
+    event_ids:
+      - "EVT-MAHANADI-2020-08" # August 2020 Deep Depression Extreme Flood (168h)
+      - "EVT-MAHANADI-2023-07" # July 2023 Upper Catchment Inflow Wave (168h)
+    total_hours: 336
+    total_samples: 672
+
+  VALIDATION:
+    partition_name: "VALIDATION"
+    description: "Used for early stopping, learning rate scheduling, and hyperparameter tuning."
+    event_ids:
+      - "EVT-MAHANADI-2021-09" # September 2021 Cyclone Gulab Remnant Flood (168h)
+    total_hours: 168
+    total_samples: 336
+
+  HELD_OUT_TEST:
+    partition_name: "HELD_OUT_TEST"
+    description: "Strictly unseen events for final benchmark verification and hindcast reporting."
+    event_ids:
+      - "EVT-MAHANADI-2022-08" # August 2022 Back-to-Back Depressions Flood (216h)
+      - "EVT-MAHANADI-2024-08" # August 2024 Active Monsoon Surge (168h)
+    total_hours: 384
+    total_samples: 768

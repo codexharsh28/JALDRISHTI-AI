@@ -1,0 +1,70 @@
+{
+  "nowcast_heavy_rain_clf": {
+    "status": "VERIFIED_LOADABLE",
+    "path": "model_registry/nowcast_heavy_rain_clf.joblib",
+    "n_features": 7,
+    "feature_names": [
+      "rain_1h",
+      "rain_lag1",
+      "delta_1h",
+      "acceleration",
+      "radar_dbz",
+      "cape_jkg",
+      "pwat_mm"
+    ],
+    "test_inference_output": {
+      "pred_class": 0,
+      "pred_prob": 0.0
+    }
+  },
+  "nowcast_rain_regressor": {
+    "status": "VERIFIED_LOADABLE",
+    "path": "model_registry/nowcast_rain_regressor.joblib",
+    "n_features": 7,
+    "feature_names": [
+      "rain_1h",
+      "rain_lag1",
+      "delta_1h",
+      "acceleration",
+      "radar_dbz",
+      "cape_jkg",
+      "pwat_mm"
+    ],
+    "test_inference_output": {
+      "predicted_rain_rate_mm_hr": 27.58
+    }
+  },
+  "streamflow_gb_model": {
+    "status": "VERIFIED_LOADABLE",
+    "path": "model_registry/streamflow_gb_model.joblib",
+    "n_features": 7,
+    "feature_names": [
+      "rain_6h",
+      "rain_24h",
+      "soil_saturation",
+      "current_stage_m",
+      "stage_lag_3h_m",
+      "rate_of_rise_m_hr",
+      "upstream_discharge_cumec"
+    ],
+    "test_inference_output": {
+      "predicted_peak_stage_m": 25.25
+    }
+  },
+  "inundation_rf_model": {
+    "status": "VERIFIED_LOADABLE",
+    "path": "model_registry/inundation_rf_model.joblib",
+    "n_features": 6,
+    "feature_names": [
+      "stage_surcharge_m",
+      "dem_elevation_m",
+      "dem_slope_deg",
+      "hand_m",
+      "dist_river_km",
+      "rain_24h_mm"
+    ],
+    "test_inference_output": {
+      "predicted_depth_m": 2.85
+    }
+  }
+}

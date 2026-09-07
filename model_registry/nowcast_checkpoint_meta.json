@@ -1,0 +1,43 @@
+{
+  "model_id": "MOD-NOWCAST-XGBOOST-02",
+  "model_version": "v2.1",
+  "trained_at": "2026-08-27T03:42:36.133895+00:00",
+  "training_dataset": "data/simulation/rainfall_events_train.csv",
+  "features": [
+    "rain_1h",
+    "rain_lag1",
+    "delta_1h",
+    "acceleration",
+    "radar_dbz",
+    "cape_jkg",
+    "pwat_mm"
+  ],
+  "metrics_summary": {
+    "L0_PERSISTENCE": {
+      "csi_35mm": 0.38,
+      "pod": 0.52,
+      "far": 0.41,
+      "rmse_mm": 11.4
+    },
+    "L1_ADVECTION_FLOW": {
+      "csi_35mm": 0.54,
+      "pod": 0.68,
+      "far": 0.29,
+      "rmse_mm": 8.2
+    },
+    "L2_GRADIENT_BOOSTED": {
+      "csi_35mm": 0.75,
+      "pod": 0.947,
+      "far": 0.217,
+      "rmse_mm": 2.55,
+      "mae_mm": 1.7
+    },
+    "L3_DEEP_CONVLSTM_SURROGATE": {
+      "csi_35mm": 0.76,
+      "pod": 0.86,
+      "far": 0.14,
+      "rmse_mm": 4.8
+    }
+  },
+  "is_simulation": true
+}

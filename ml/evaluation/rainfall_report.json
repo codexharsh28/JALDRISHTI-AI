@@ -1,0 +1,26 @@
+{
+  "report_title": "Multi-Sensor Precipitation Nowcasting Lead-Time Evaluation",
+  "generated_at": "2026-08-27T00:00:00Z",
+  "dataset_state": "SYNTHETIC_HOLDOUT",
+  "holdout_events": ["EVT-MAHANADI-2022-08", "EVT-MAHANADI-2024-08"],
+  "lead_time_performance": {
+    "30m": {"csi_35mm": 0.82, "pod": 0.91, "far": 0.11, "rmse_mm": 3.2, "mae_mm": 2.1},
+    "60m": {"csi_35mm": 0.76, "pod": 0.86, "far": 0.14, "rmse_mm": 4.8, "mae_mm": 3.0},
+    "120m": {"csi_35mm": 0.68, "pod": 0.79, "far": 0.19, "rmse_mm": 6.4, "mae_mm": 4.2},
+    "180m": {"csi_35mm": 0.58, "pod": 0.71, "far": 0.26, "rmse_mm": 7.9, "mae_mm": 5.5},
+    "240m": {"csi_35mm": 0.49, "pod": 0.63, "far": 0.33, "rmse_mm": 9.2, "mae_mm": 6.8},
+    "360m": {"csi_35mm": 0.39, "pod": 0.54, "far": 0.42, "rmse_mm": 11.1, "mae_mm": 8.4}
+  },
+  "rainfall_category_metrics": {
+    "light_rain_0_10mm": {"pod": 0.96, "far": 0.08, "rmse_mm": 1.8},
+    "moderate_rain_10_35mm": {"pod": 0.89, "far": 0.12, "rmse_mm": 3.9},
+    "heavy_rain_35_65mm": {"pod": 0.86, "far": 0.14, "rmse_mm": 4.8},
+    "extreme_rain_gt_65mm": {"pod": 0.78, "far": 0.22, "rmse_mm": 7.6}
+  },
+  "model_baseline_comparison": {
+    "L0_PERSISTENCE": {"csi_35mm": 0.38, "rmse_mm": 11.4},
+    "L1_ADVECTION_FLOW": {"csi_35mm": 0.54, "rmse_mm": 8.2},
+    "L2_GRADIENT_BOOSTED": {"csi_35mm": 0.75, "rmse_mm": 2.55},
+    "L3_DEEP_CONVLSTM": {"csi_35mm": 0.76, "rmse_mm": 4.8}
+  }
+}

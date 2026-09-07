@@ -1,0 +1,22 @@
+# Real Data Source & Provider Audit Matrix
+## JALDRISHTI AI (SIH26071)
+
+This matrix documents the operational and research data sources across the entire hydrometeorological pipeline, including access mechanisms, authentication, licenses, coordinate systems, and scientific constraints.
+
+---
+
+## 1. Comprehensive Provider Matrix
+
+| Provider / Agency | Product Name | Dataset State | Native Spatial Res | Native Time Res | Access Method | Auth Requirements | License / Usage | Operational Latency | Coordinate System | Known Scientific Limitations |
+|---|---|---|---|---|---|---|---|---|---|---|
+| **India Meteorological Department (IMD)** | Automated Weather Station (AWS/ARG) | `LIVE_OPERATIONAL` / `REAL_HISTORICAL_ANALYSIS` | Point Observations (Station network) | 15–60 minutes | REST API / IMD Weather Portal | Institutional API Key (`IMD_API_KEY`) | Official Government (India) | 15–30 mins | EPSG:4326 | Station density uneven in rural floodplains; missing data during power disruptions |
+| **IMD Climate Research Centre** | 0.25° Daily Gridded Rainfall (Pai et al.) | `REAL_HISTORICAL_ANALYSIS` | 0.25° × 0.25° (~28 km) | Daily (08:30 IST) | Binary / NetCDF Archive Download | Open Access for Research | Research / Academic Use | 24–48 hours (published next day) | EPSG:4326 | Daily accumulation only; cannot resolve sub-daily convective rainfall bursts |
+| **IMD Doppler Weather Radar** | Paradip DWR Max-Z / SRI (Plan Position Indicator) | `LIVE_OPERATIONAL` | 1.0 km Cartesian grid (250 km range) | 10 minutes | Direct DWR Telemetry Feed | Protected Network Access | Government Restricted | 8–15 mins | Polar $\rightarrow$ EPSG:4326 | Beam blockage along Western Ghats; multi-year historical volume archives not publicly available |
+| **ISRO SAC / MOSDAC** | INSAT-3DR Hydro-Estimator Method (HEM) | `LIVE_OPERATIONAL` / `REAL_HISTORICAL_ANALYSIS` | 0.04° (~4.0 km) | 30 minutes | MOSDAC Open Data Portal / FTP | Free Registration Token | ISRO Open Data Policy | 25–40 mins | Geostationary (74°E) $\rightarrow$ EPSG:4326 | Parallax displacement over high clouds; underestimates warm-rain orographic precipitation |
+| **NASA / JAXA PMM** | GPM IMERG V07B (Early / Final Runs) | `LIVE_OPERATIONAL` (Early) / `REAL_HISTORICAL_ANALYSIS` (Final) | 0.10° × 0.10° (~10 km) | 30 minutes | HTTPS / NASA Earthdata OPeNDAP | NASA Earthdata Login Token | Unrestricted Public Open Data | Early: 4 hours; Final: 2.5 months | EPSG:4326 | Early run lacks monthly gauge calibration; Final run unsuitable for real-time nowcasting |
+| **ECMWF** | Integrated Forecasting System (IFS) Open Data | `LIVE_OPERATIONAL` | 0.25° × 0.25° (~28 km) | 3-hourly / 6-hourly (0–144h) | AWS S3 / ECMWF Open Data API | Open Data (No Auth) | CC-BY-4.0 Open License | 6–8 hours after run | EPSG:4326 | **Rolling real-time forecast only. Does NOT provide a 2018–2024 historical forecast archive.** |
+| **ECMWF (Copernicus C3S)** | ERA5 / ERA5-Land Reanalysis | `REAL_HISTORICAL_ANALYSIS` | 0.10° (~9 km) | 1 hour | Copernicus Climate Data Store (CDS) | CDS API Key | Open Access | ~5 days | EPSG:4326 | **Reanalysis assimilates observations after the fact; NOT an operational forecast.** |
+| **Central Water Commission (CWC)** | River Gauge Stage & Discharge Telemetry | `LIVE_OPERATIONAL` / `REAL_HISTORICAL_ANALYSIS` | Point Gauge (Mundali, Naraj, Cuttack) | 1 hour / Daily Bulletins | India-WRIS Portal / CWC Flood Web | Public Web / WRIS Login | Official Public Data | 1–3 hours | EPSG:4326 | Historical machine-readable hourly time-series requires formal institutional clearance |
+| **ESA Copernicus** | Sentinel-1 SAR Ground Range Detected (GRD) | `REAL_HISTORICAL_ANALYSIS` | 10–20 meters | 6–12 day repeat pass | Copernicus Data Space Ecosystem | CDSE User Token | Free & Open (CC-BY) | 12–24 hours post-pass | EPSG:4326 / UTM 45N | High latency and 6–12 day repeat pass prevent real-time emergency routing during active storms |
+| **ESA Copernicus** | Global DEM GLO-30 | `REAL_HISTORICAL_ANALYSIS` | 30 meters (1 arcsec) | Static Baseline | OpenTopography / AWS S3 | Open Access | Free Public Open Data | N/A (Static) | EPSG:4326 / WGS84 | Tree canopy and building artifacts in urban areas require HAND and hydrologic conditioning |
+| **WorldPop** | Constrained 100m Population Density | `REAL_HISTORICAL_ANALYSIS` | 100 meters | Annual Baseline | WorldPop REST API / FTP | CC-BY-4.0 | Open Access | N/A (Static) | EPSG:4326 | Static census-extrapolated grid; does not capture temporary daytime migration or shelter occupancy |

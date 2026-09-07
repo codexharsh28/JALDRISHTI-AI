@@ -1,0 +1,10 @@
+{
+  "event_id": "EVT-MAHANADI-2022-08",
+  "observed_peak_stage_m": 26.65,
+  "danger_level_m": 26.41,
+  "observed_danger_exceedance_time": "2022-08-16T00:00:00Z",
+  "observed_peak_time": "2022-08-16T06:00:00Z",
+  "observed_peak_discharge_cumec": 26800.0,
+  "observed_sar_inundation_extent_sqkm": 184.6,
+  "source": "CWC Flood Bulletin & NRSC Sentinel-1 SAR"
+}

@@ -1,0 +1,68 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "basin_id": "pilot-mahanadi-delta",
+        "name": "Mahanadi Delta Pilot Basin",
+        "state": "Odisha",
+        "country": "India",
+        "area_sqkm": 14250.0,
+        "source": "Survey of India / India-WRIS Derived Catchment Baseline (Prototype)",
+        "crs": "EPSG:4326"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              84.8,
+              20.35
+            ],
+            [
+              85.15,
+              20.7
+            ],
+            [
+              85.6,
+              21.05
+            ],
+            [
+              86.2,
+              20.95
+            ],
+            [
+              86.75,
+              20.75
+            ],
+            [
+              86.95,
+              20.4
+            ],
+            [
+              86.85,
+              20.15
+            ],
+            [
+              86.5,
+              19.9
+            ],
+            [
+              85.8,
+              19.8
+            ],
+            [
+              85.2,
+              20.05
+            ],
+            [
+              84.8,
+              20.35
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

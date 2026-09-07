@@ -1,0 +1,39 @@
+# JALDRISHTI AI — Source Freshness & Latency Configuration
+# Defines source-specific maximum allowed ages (in seconds) before marking data as STALE.
+
+freshness_policy:
+  IMD_ODISHA_AWS:
+    max_age_seconds: 3600         # 1 hour
+    stale_threshold_seconds: 7200 # 2 hours
+    offline_threshold_seconds: 14400 # 4 hours
+    nominal_latency_minutes: 15
+
+  NASA_GPM_IMERG_EARLY:
+    max_age_seconds: 21600        # 6 hours (incorporates nominal 4h latency)
+    stale_threshold_seconds: 36000 # 10 hours
+    offline_threshold_seconds: 86400 # 24 hours
+    nominal_latency_minutes: 240
+
+  ISRO_MOSDAC_INSAT3DR:
+    max_age_seconds: 3600         # 1 hour
+    stale_threshold_seconds: 7200 # 2 hours
+    offline_threshold_seconds: 14400 # 4 hours
+    nominal_latency_minutes: 25
+
+  ECMWF_OPEN_DATA_NWP:
+    max_age_seconds: 21600        # 6 hours
+    stale_threshold_seconds: 43200 # 12 hours
+    offline_threshold_seconds: 86400 # 24 hours
+    nominal_latency_minutes: 180
+
+  CWC_WRIS_TELEMETRY:
+    max_age_seconds: 7200         # 2 hours
+    stale_threshold_seconds: 14400 # 4 hours
+    offline_threshold_seconds: 28800 # 8 hours
+    nominal_latency_minutes: 45
+
+  IMD_DWR_PARADIP:
+    max_age_seconds: 1200         # 20 mins
+    stale_threshold_seconds: 2400 # 40 mins
+    offline_threshold_seconds: 7200 # 2 hours
+    nominal_latency_minutes: 10

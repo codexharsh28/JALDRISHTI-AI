@@ -1,0 +1,57 @@
+{
+  "model_id": "MOD-INUNDATION-RF-01",
+  "model_name": "RandomForestInundationSurrogate",
+  "model_version": "v1.5-RF",
+  "model_status": "CANDIDATE",
+  "depth_status": "MODEL_ESTIMATE",
+  "depth_validation": "UNAVAILABLE",
+  "trained_at": "2026-08-27T05:08:15.076098+00:00",
+  "training_dataset": "data/simulation/inundation_samples_train.csv",
+  "validation_dataset": "data/simulation/inundation_samples_val.csv",
+  "features": [
+    "stage_surcharge_m",
+    "dem_elevation_m",
+    "dem_slope_deg",
+    "hand_m",
+    "dist_river_km",
+    "rain_24h_mm"
+  ],
+  "class_imbalance": {
+    "train": {
+      "set_name": "Train",
+      "total_samples": 2000,
+      "flooded_cells_positive": 697,
+      "dry_cells_negative": 1303,
+      "flood_prevalence_pct": 34.85,
+      "imbalance_ratio": 1.87,
+      "sampling_strategy": "RAW_NATURAL_DISTRIBUTION_NO_SYNTHETIC_OVERFIT"
+    },
+    "validation": {
+      "set_name": "Validation",
+      "total_samples": 500,
+      "flooded_cells_positive": 183,
+      "dry_cells_negative": 317,
+      "flood_prevalence_pct": 36.6,
+      "imbalance_ratio": 1.73,
+      "sampling_strategy": "RAW_NATURAL_DISTRIBUTION_NO_SYNTHETIC_OVERFIT"
+    }
+  },
+  "extent_metrics": {
+    "intersection_over_union_iou": 0.5536,
+    "f1_score": 0.7127,
+    "critical_success_index_csi": 0.5536,
+    "precision": 0.7207,
+    "recall": 0.7049
+  },
+  "probabilistic_calibration": {
+    "expected_calibration_error_ece": 0.0435,
+    "brier_score": 0.1231,
+    "method": "Platt_Sigmoid_Calibration"
+  },
+  "unvalidated_depth_estimates": {
+    "depth_rmse_m": 0.27,
+    "depth_mae_m": 0.13,
+    "note": "Depth validation is UNAVAILABLE due to absence of high-density spatial depth gauges. Only 2D surface extent is validated against Sentinel-1 SAR Reference."
+  },
+  "is_simulation": true
+}

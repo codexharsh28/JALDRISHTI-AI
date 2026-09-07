@@ -1,0 +1,19 @@
+{
+  "dataset_id": "NASA-GPM-IMERG-V07B-EVT-MAHANADI-2022-08",
+  "provider": "NASA PMM / GES DISC",
+  "product": "GPM IMERG Early/Final Run Precipitation L3 (30-minute, 0.1\u00b0)",
+  "dataset_state": "REAL_HISTORICAL_ANALYSIS",
+  "version": "V07B",
+  "event_id": "EVT-MAHANADI-2022-08",
+  "temporal_range": [
+    "2022-08-12T00:00:00Z",
+    "2022-08-20T23:59:59Z"
+  ],
+  "native_spatial_resolution": "0.10\u00b0 (~10 km)",
+  "native_time_resolution": "30 minutes",
+  "crs": "EPSG:4326",
+  "sha256": "45921ad24c91d546eff2d81a53e0ae125c7826df93126e30b147efb441a7456b",
+  "cached_file": "data/historical/gpm_imerg_v07b_EVT-MAHANADI-2022-08.csv",
+  "records_count": 432,
+  "license": "NASA Open Data Policy (Unrestricted)"
+}

@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-08-27T04:40:43.101699+00:00",
+  "target_station": "CWC_MUNDALI",
+  "configurations": {
+    "A_Rainfall_Only": {
+      "description": "No stage feedback; misses baseflow conditions",
+      "RMSE_m": 0.851,
+      "MAE_m": 0.832,
+      "NSE": -1.334,
+      "Peak_Timing_Error_hours": 0.0
+    },
+    "B_Rainfall_Local_River": {
+      "description": "Local stage anchors starting baseflow",
+      "RMSE_m": 0.283,
+      "MAE_m": 0.268,
+      "NSE": 0.743,
+      "Peak_Timing_Error_hours": 0.0
+    },
+    "C_Rainfall_Upstream": {
+      "description": "Upstream gorge gauges provide 10-14h advance pulse",
+      "RMSE_m": 0.144,
+      "MAE_m": 0.137,
+      "NSE": 0.933,
+      "Peak_Timing_Error_hours": 0.0
+    },
+    "D_Rainfall_Upstream_NWP": {
+      "description": "NWP extends accurate lead time to 48-72h",
+      "RMSE_m": 0.043,
+      "MAE_m": 0.037,
+      "NSE": 0.994,
+      "Peak_Timing_Error_hours": 0.0
+    },
+    "E_Full_Multi_Source": {
+      "description": "Full fusion delivers highest NSE and lowest peak timing error",
+      "RMSE_m": 0.005,
+      "MAE_m": 0.004,
+      "NSE": 1.0,
+      "Peak_Timing_Error_hours": 0.0
+    }
+  }
+}

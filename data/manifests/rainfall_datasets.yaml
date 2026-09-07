@@ -1,0 +1,66 @@
+# JALDRISHTI AI — Rainfall Datasets Manifest
+manifest_version: "v4.0"
+updated_at: "2026-08-27T00:00:00Z"
+basin_id: "pilot-mahanadi-delta"
+
+datasets:
+  - dataset_id: "IMD-GRIDDED-025-DAILY"
+    provider: "India Meteorological Department (IMD)"
+    product: "IMD 0.25° x 0.25° Daily Gridded Rainfall (Pai et al.)"
+    version: "v2024"
+    state: "REAL_HISTORICAL_ANALYSIS"
+    source_url: "https://www.imdpune.gov.in/Clim_Pred_LRF_New/Grided_Data_Download.html"
+    native_resolution: "0.25 deg (~28 km)"
+    native_temporal_resolution: "24 hours (08:30 IST to 08:30 IST)"
+    units: "mm/day"
+    crs: "EPSG:4326"
+    spatial_extent: [85.0, 20.0, 87.0, 21.0]
+    temporal_extent: ["2018-01-01", "2024-12-31"]
+    license: "IMD Open Climate Research License"
+    access_notes: "Used for event identification, regional water balance, and retrospective verification"
+    processing_version: "v1.0"
+
+  - dataset_id: "NASA-GPM-IMERG-V07B-EARLY"
+    provider: "NASA PMM / GES DISC"
+    product: "GPM IMERG Early Run Half-Hourly Precipitation L3"
+    version: "V07B"
+    state: "LIVE_OPERATIONAL"
+    source_url: "https://gpm.nasa.gov/data/imerg"
+    native_resolution: "0.10 deg (~10 km)"
+    native_temporal_resolution: "30 minutes"
+    units: "mm/hr"
+    crs: "EPSG:4326"
+    spatial_extent: [85.0, 20.0, 87.0, 21.0]
+    operational_latency_minutes: 240.0
+    license: "NASA Earthdata Open Access (Unrestricted)"
+    access_notes: "Primary operational satellite nowcast input"
+    processing_version: "v1.0"
+
+  - dataset_id: "NASA-GPM-IMERG-V07B-FINAL"
+    provider: "NASA PMM / GES DISC"
+    product: "GPM IMERG Final Run (Gauge-Calibrated) L3"
+    version: "V07B"
+    state: "REAL_HISTORICAL_ANALYSIS"
+    source_url: "https://gpm.nasa.gov/data/imerg"
+    native_resolution: "0.10 deg (~10 km)"
+    native_temporal_resolution: "30 minutes"
+    units: "mm/hr"
+    crs: "EPSG:4326"
+    spatial_extent: [85.0, 20.0, 87.0, 21.0]
+    operational_latency_minutes: 57600.0
+    license: "NASA Earthdata Open Access"
+    access_notes: "Used strictly for retrospective event analysis; suppressed from operational nowcast inference"
+    processing_version: "v1.0"
+
+  - dataset_id: "IMD-ODISHA-AWS-GAUGES"
+    provider: "IMD / OSDMA"
+    product: "Tipping Bucket Automated Weather Stations (AWS)"
+    version: "v2024"
+    state: "LIVE_OPERATIONAL"
+    native_resolution: "Point Gauge Locations (12 Stations)"
+    native_temporal_resolution: "15 to 60 minutes"
+    units: "mm/hr"
+    crs: "EPSG:4326"
+    license: "Official State Hydromet Feed"
+    access_notes: "Used for real-time ground truthing and bias correction"
+    processing_version: "v1.0"

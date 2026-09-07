@@ -1,0 +1,19 @@
+{
+  "dataset_id": "IMD-025-GRIDDED-EVT-MAHANADI-2020-08",
+  "provider": "India Meteorological Department (IMD) / National Climate Centre",
+  "product": "IMD 0.25\u00b0 x 0.25\u00b0 Daily Gridded Rainfall Archive (Pai et al.)",
+  "dataset_state": "REAL_HISTORICAL_ANALYSIS",
+  "version": "v2024",
+  "event_id": "EVT-MAHANADI-2020-08",
+  "temporal_range": [
+    "2020-08-25",
+    "2020-08-31"
+  ],
+  "native_spatial_resolution": "0.25\u00b0 (~28 km)",
+  "native_time_resolution": "24 hours (08:30 IST to 08:30 IST)",
+  "crs": "EPSG:4326",
+  "sha256": "1f05433375ba1839709b3dc50c1907de7fcc973216e93df73e25119159f20e61",
+  "cached_file": "data/historical/imd_gridded_025_EVT-MAHANADI-2020-08.csv",
+  "records_count": 280,
+  "license": "IMD Open Climate Data / Non-Commercial Research Access"
+}

@@ -1,0 +1,107 @@
+# JALDRISHTI AI — Centralized Security & Policy Configuration
+# Production cybersecurity parameters, rate-limiting windows, and access control settings.
+
+environment: "production" # "development" | "staging" | "production"
+
+# ==========================================
+# 1. Rate Limiting Windows & Thresholds
+# ==========================================
+rate_limits:
+  otp_send:
+    dimension: "phone_hash"
+    max_requests: 3
+    window_seconds: 600
+    lockout_seconds_on_breach: 600
+  otp_verify:
+    dimension: "phone_hash"
+    max_requests: 5
+    window_seconds: 600
+    lockout_seconds_on_breach: 900
+  user_registration:
+    dimension: "ip"
+    max_requests: 10
+    window_seconds: 3600
+    lockout_seconds_on_breach: 3600
+  user_login:
+    dimension: "ip"
+    max_requests: 10
+    window_seconds: 900
+    lockout_seconds_on_breach: 900
+  subscriptions_mutation:
+    dimension: "user_id"
+    max_requests: 30
+    window_seconds: 60
+    lockout_seconds_on_breach: 60
+  public_read_endpoints:
+    dimension: "ip"
+    max_requests: 120
+    window_seconds: 60
+    lockout_seconds_on_breach: 60
+  websocket_connect:
+    dimension: "ip"
+    max_concurrent_connections: 20
+    max_messages_per_minute: 60
+
+# ==========================================
+# 2. Authentication & Session Lifetimes
+# ==========================================
+authentication:
+  algorithm: "HS256"
+  access_token_expire_minutes: 1440 # 24 hours
+  refresh_token_expire_days: 30
+  otp:
+    code_length: 6
+    ttl_minutes: 10
+    max_attempts: 3
+    salt_bytes: 8
+    hash_algorithm: "sha256"
+  roles:
+    - PUBLIC_USER
+    - ANALYST
+    - OPERATOR
+    - ADMIN
+
+# ==========================================
+# 3. Network, CORS & Request Limits
+# ==========================================
+network:
+  max_request_size_bytes: 2097152 # 2 MB maximum JSON payload
+  cors:
+    allow_credentials: true
+    allowed_origins:
+      - "http://localhost:5173"
+      - "http://127.0.0.1:5173"
+      - "http://localhost:3000"
+      - "http://127.0.0.1:3000"
+      - "https://jaldrishti.odisha.gov.in"
+    allowed_methods:
+      - "GET"
+      - "POST"
+      - "PUT"
+      - "DELETE"
+      - "OPTIONS"
+    allowed_headers:
+      - "Content-Type"
+      - "Authorization"
+      - "X-Request-ID"
+      - "X-Client-Version"
+
+# ==========================================
+# 4. Security Headers
+# ==========================================
+headers:
+  content_type_options: "nosniff"
+  frame_options: "DENY"
+  referrer_policy: "strict-origin-when-cross-origin"
+  xss_protection: "1; mode=block"
+  content_security_policy: "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' ws: wss:;"
+  hsts: "max-age=31536000; includeSubDomains; preload"
+
+# ==========================================
+# 5. Data Retention Policies (Days)
+# ==========================================
+retention:
+  audit_logs_days: 365
+  notification_deliveries_days: 90
+  inactive_user_verifications_hours: 24
+  stale_events_hours: 72

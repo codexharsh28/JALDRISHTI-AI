@@ -1,0 +1,15 @@
+{
+  "run_id": "RUN-CONVLSTM-202608270542-e4a210",
+  "model_id": "RAIN_L3_CONVLSTM",
+  "model_name": "Deep Spatiotemporal ConvLSTM Precipitation Nowcaster",
+  "framework": "PyTorch",
+  "pytorch_version": "2.13.0+cpu",
+  "device": "cpu",
+  "parameter_count": 108065,
+  "trained_epochs": 5,
+  "best_epoch": 4,
+  "best_validation_loss": 21.6811,
+  "total_training_duration_seconds": 57.09,
+  "checkpoint_sha256": "11d3bf7bb1a96ea280108b66a4c7d5fa0cfdafa72bcb9c5e45bb5ba8fb9f16da",
+  "status": "CANDIDATE"
+}

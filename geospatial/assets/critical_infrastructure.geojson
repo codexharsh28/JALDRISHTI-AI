@@ -1,0 +1,253 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "asset_id": "AST-HOSP-01",
+        "name": "SCB Medical College & Hospital Cuttack",
+        "category": "HOSPITAL",
+        "criticality": "HIGH",
+        "bed_capacity": 1200,
+        "elevation_m": 24.8,
+        "source": "OpenStreetMap / Public Health Directory",
+        "subbasin_id": "sub-central-cuttack"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.889,
+          20.478
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "asset_id": "AST-HOSP-02",
+        "name": "AIIMS Bhubaneswar Hospital",
+        "category": "HOSPITAL",
+        "criticality": "HIGH",
+        "bed_capacity": 960,
+        "elevation_m": 48.2,
+        "source": "OpenStreetMap",
+        "subbasin_id": "sub-central-cuttack"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.778,
+          20.231
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "asset_id": "AST-HOSP-03",
+        "name": "District Headquarters Hospital Kendrapara",
+        "category": "HOSPITAL",
+        "criticality": "HIGH",
+        "bed_capacity": 300,
+        "elevation_m": 12.4,
+        "source": "OpenStreetMap",
+        "subbasin_id": "sub-lower-delta"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.425,
+          20.505
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "asset_id": "AST-HOSP-04",
+        "name": "Paradip Port Trust Hospital",
+        "category": "HOSPITAL",
+        "criticality": "MEDIUM",
+        "bed_capacity": 120,
+        "elevation_m": 4.8,
+        "source": "OpenStreetMap",
+        "subbasin_id": "sub-lower-delta"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.662,
+          20.271
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "asset_id": "AST-SHELTER-01",
+        "name": "Multipurpose Cyclone Shelter Marshaghai",
+        "category": "SHELTER",
+        "criticality": "HIGH",
+        "capacity": 2000,
+        "elevation_m": 9.2,
+        "source": "OSDMA / State Disaster Management",
+        "subbasin_id": "sub-lower-delta"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.512,
+          20.415
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "asset_id": "AST-SHELTER-02",
+        "name": "Cyclone Shelter Erasama",
+        "category": "SHELTER",
+        "criticality": "HIGH",
+        "capacity": 2500,
+        "elevation_m": 6.8,
+        "source": "OSDMA",
+        "subbasin_id": "sub-lower-delta"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          86.598,
+          20.21
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "asset_id": "AST-BRIDGE-01",
+        "name": "Mahanadi Rail Bridge Cuttack",
+        "category": "BRIDGE",
+        "criticality": "HIGH",
+        "length_m": 2100,
+        "elevation_m": 27.5,
+        "source": "Indian Railways / OSM",
+        "subbasin_id": "sub-central-cuttack"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.892,
+          20.49
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "asset_id": "AST-BRIDGE-02",
+        "name": "Naraj Road Bridge",
+        "category": "BRIDGE",
+        "criticality": "HIGH",
+        "length_m": 1450,
+        "elevation_m": 31.0,
+        "source": "NHAI / State PWD",
+        "subbasin_id": "sub-upper-delta"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.765,
+          20.468
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "asset_id": "AST-POWER-01",
+        "name": "OPTCL Grid Substation Choudwar (400kV)",
+        "category": "POWER_SUBSTATION",
+        "criticality": "HIGH",
+        "capacity_mva": 630,
+        "elevation_m": 34.2,
+        "source": "OPTCL / State Power Grid",
+        "subbasin_id": "sub-central-cuttack"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          85.925,
+          20.53
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "asset_id": "AST-ROAD-01",
+        "name": "NH-16 Bhubaneswar-Cuttack Express Corridor",
+        "category": "HIGHWAY",
+        "criticality": "HIGH",
+        "length_km": 28.0,
+        "elevation_m": 26.0,
+        "source": "NHAI / OSM",
+        "subbasin_id": "sub-central-cuttack"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            85.824,
+            20.296
+          ],
+          [
+            85.85,
+            20.36
+          ],
+          [
+            85.879,
+            20.463
+          ],
+          [
+            85.918,
+            20.521
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "asset_id": "AST-ROAD-02",
+        "name": "SH-12 Cuttack-Paradip State Highway",
+        "category": "HIGHWAY",
+        "criticality": "MEDIUM",
+        "length_km": 82.0,
+        "elevation_m": 12.0,
+        "source": "State PWD / OSM",
+        "subbasin_id": "sub-lower-delta"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            85.879,
+            20.463
+          ],
+          [
+            86.168,
+            20.258
+          ],
+          [
+            86.518,
+            20.412
+          ],
+          [
+            86.671,
+            20.264
+          ]
+        ]
+      }
+    }
+  ]
+}

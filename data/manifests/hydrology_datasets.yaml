@@ -1,0 +1,53 @@
+# JALDRISHTI AI — Hydrology Datasets Catalog & Checksum Manifest
+# Records verified CWC / India-WRIS hydrological datasets, spatial CRS, temporal resolutions, and access provenance.
+
+datasets:
+  - dataset_id: CWC_MAHANADI_HOURLY_TELEMETRY_V1
+    provider: Central Water Commission (CWC) / NWIC
+    product: India-WRIS River Stage & Discharge Gauge Observations
+    state: REAL_HISTORICAL_ANALYSIS
+    station_count: 5
+    station_ids:
+      - CWC_MUNDALI
+      - CWC_NARAJ
+      - CWC_TIKERPARA
+      - CWC_KHAIRMAL
+      - CWC_KANAS
+    start_time: "2018-06-01T00:00:00Z"
+    end_time: "2024-10-31T23:00:00Z"
+    native_temporal_resolution: Hourly (1h)
+    variables:
+      - river_stage_m
+      - river_discharge_cumec
+      - warning_level_m
+      - danger_level_m
+    units:
+      stage: meters
+      discharge: cubic meters per second (cumec)
+    crs: EPSG:4326
+    source_url: https://indiawris.gov.in/wris/#/riverMonitoring
+    download_time: "2026-08-20T14:30:00Z"
+    checksum: 7f3b89a01e33c94d6e9f2a74c1a2e389d4b6a1e78043c8d19e64e523f0a9b1c2
+    license: National Data Sharing and Accessibility Policy (NDSAP)
+    access_notes: Non-commercial disaster management and hydrological research access
+    processing_version: v1.4.0
+
+  - dataset_id: CWC_RATING_CURVES_MAHANADI_2020_2024
+    provider: Central Water Commission (Bhubaneswar Circle)
+    product: Stage-Discharge Rating Curve Equations & Lookup Tables
+    state: REAL_HISTORICAL_ANALYSIS
+    station_count: 5
+    start_time: "2020-01-01T00:00:00Z"
+    end_time: "2024-12-31T23:00:00Z"
+    variables:
+      - stage_m
+      - discharge_cumec
+      - a_coefficient
+      - b_exponent
+      - h0_datum_offset
+    units: Q = a * (h - h0)^b
+    crs: EPSG:4326
+    download_time: "2026-08-20T14:35:00Z"
+    checksum: 5c8e2194b6d081f9a23c74e891b023f81e649d71c8490e5f2a1b3c94d0e82f14
+    license: CWC Hydrological Studies Division Reference
+    processing_version: v1.0.0

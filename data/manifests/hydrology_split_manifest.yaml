@@ -1,0 +1,62 @@
+# JALDRISHTI AI — Hydrology Event Split Manifest
+# Enforces strict whole-event partition splitting. Zero sliding windows cross event boundaries.
+
+split_policy: WHOLE_EVENT_PARTITIONING
+target_variable_stage: stage_m
+target_variable_discharge: discharge_cumec
+horizons_hours: [1, 3, 6, 12, 24, 48, 72]
+
+partitions:
+  TRAIN:
+    description: "Historical monsoon flood surges used strictly for model calibration and parameter estimation"
+    events:
+      - event_id: EVT-MAHANADI-2020-08
+        start_time: "2020-08-18T00:00:00Z"
+        peak_time: "2020-08-28T18:00:00Z"
+        end_time: "2020-09-02T23:00:00Z"
+        severity: SEVERE
+        peak_discharge_cumec: 28500.0
+        peak_stage_m: 26.75
+        stations_involved: [CWC_MUNDALI, CWC_NARAJ, CWC_TIKERPARA, CWC_KHAIRMAL, CWC_KANAS]
+
+      - event_id: EVT-MAHANADI-2023-07
+        start_time: "2023-07-10T00:00:00Z"
+        peak_time: "2023-07-16T12:00:00Z"
+        end_time: "2023-07-22T23:00:00Z"
+        severity: MODERATE
+        peak_discharge_cumec: 16800.0
+        peak_stage_m: 26.15
+        stations_involved: [CWC_MUNDALI, CWC_NARAJ, CWC_TIKERPARA, CWC_KHAIRMAL, CWC_KANAS]
+
+  VALIDATION:
+    description: "Independent validation event for model selection, hyperparameter tuning, and quantile calibration"
+    events:
+      - event_id: EVT-MAHANADI-2021-09
+        start_time: "2021-09-10T00:00:00Z"
+        peak_time: "2021-09-14T06:00:00Z"
+        end_time: "2021-09-20T23:00:00Z"
+        severity: MODERATE
+        peak_discharge_cumec: 21200.0
+        peak_stage_m: 26.42
+        stations_involved: [CWC_MUNDALI, CWC_NARAJ, CWC_TIKERPARA, CWC_KHAIRMAL, CWC_KANAS]
+
+  HELD_OUT_TEST:
+    description: "Strictly untouched held-out extreme flood events used only for final benchmark scoring"
+    events:
+      - event_id: EVT-MAHANADI-2022-08
+        start_time: "2022-08-10T00:00:00Z"
+        peak_time: "2022-08-16T04:00:00Z"
+        end_time: "2022-08-22T23:00:00Z"
+        severity: EXTREME
+        peak_discharge_cumec: 34200.0
+        peak_stage_m: 27.20
+        stations_involved: [CWC_MUNDALI, CWC_NARAJ, CWC_TIKERPARA, CWC_KHAIRMAL, CWC_KANAS]
+
+      - event_id: EVT-MAHANADI-2024-08
+        start_time: "2024-08-01T00:00:00Z"
+        peak_time: "2024-08-06T15:00:00Z"
+        end_time: "2024-08-12T23:00:00Z"
+        severity: SEVERE
+        peak_discharge_cumec: 26400.0
+        peak_stage_m: 26.68
+        stations_involved: [CWC_MUNDALI, CWC_NARAJ, CWC_TIKERPARA, CWC_KHAIRMAL, CWC_KANAS]

@@ -1,0 +1,9 @@
+{
+  "cutoff_time": "2022-08-15T06:00:00+00:00",
+  "current_stage_m": 22.4,
+  "accum_24h_rainfall_mm": 164.5,
+  "soil_saturation_index": 0.92,
+  "rate_of_rise_m_hr": 0.18,
+  "upstream_discharge_cumec": 19500.0,
+  "feature_hash": "82e1e34606dfcc5b8d29aaa54d2b0eee45ca18c4ad28a7d770217480b97aecc4"
+}

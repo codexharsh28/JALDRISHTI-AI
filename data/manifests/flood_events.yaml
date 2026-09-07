@@ -1,0 +1,154 @@
+# JALDRISHTI AI — Historical Flood Event Catalog (Mahanadi Delta Pilot Basin)
+# Explicit Event States: CANDIDATE | VERIFIED | REJECTED | UNVERIFIED
+# Every VERIFIED event includes documented hydrological response, rainfall totals, and references.
+
+basin_id: "pilot-mahanadi-delta"
+catalog_version: "v2.0"
+updated_at: "2026-08-27T00:00:00Z"
+
+events:
+  - event_id: "EVT-MAHANADI-2020-08"
+    name: "August 2020 Deep Depression Extreme Delta Flood"
+    state: "VERIFIED"
+    partition: "TRAIN"
+    period:
+      start_time: "2020-08-25T00:00:00Z"
+      peak_time: "2020-08-28T18:00:00Z"
+      end_time: "2020-08-31T23:59:59Z"
+      duration_hours: 168
+    meteorological_driver: "Deep Depression (BOB 04) over Bay of Bengal making landfall near Paradip"
+    documented_rainfall:
+      source: "IMD 0.25° Daily Gridded Archive & IMERG V07B"
+      catchment_peak_24h_mm: 284.5
+      basin_average_72h_mm: 215.0
+    documented_hydrology:
+      source: "CWC Flood Bulletin / Mundali Discharge Record"
+      mundali_peak_discharge_cumec: 28450.0
+      naraj_peak_stage_m: 26.85
+      danger_level_m: 26.41
+      severity: "CRITICAL_RED"
+    documented_inundation:
+      source: "Copernicus Sentinel-1 SAR (Acquisition 2020-08-29)"
+      estimated_extent_sqkm: 215.4
+      affected_districts: ["Cuttack", "Puri", "Kendrapara", "Jagatsinghpur"]
+    data_availability:
+      imd_gridded_rainfall: "AVAILABLE"
+      gpm_imerg_v07b: "AVAILABLE"
+      cwc_gauge_daily: "AVAILABLE"
+      radar_volume_scans: "UNAVAILABLE (Requires IMD non-public DWR archive)"
+      nwp_operational_forecast: "UNAVAILABLE (ECMWF Open Data is rolling only; TIGGE archive required)"
+      sentinel1_sar_mask: "AVAILABLE"
+
+  - event_id: "EVT-MAHANADI-2021-09"
+    name: "September 2021 Cyclone Gulab Remnant Flood"
+    state: "VERIFIED"
+    partition: "VALIDATION"
+    period:
+      start_time: "2021-09-24T00:00:00Z"
+      peak_time: "2021-09-27T12:00:00Z"
+      end_time: "2021-09-30T23:59:59Z"
+      duration_hours: 168
+    meteorological_driver: "Cyclonic Storm Gulab track across South Odisha causing heavy delta rainfall"
+    documented_rainfall:
+      source: "IMD 0.25° Daily Gridded Archive & IMERG V07B"
+      catchment_peak_24h_mm: 182.0
+      basin_average_72h_mm: 148.0
+    documented_hydrology:
+      source: "CWC Hydrology Telemetry"
+      mundali_peak_discharge_cumec: 21400.0
+      naraj_peak_stage_m: 25.90
+      danger_level_m: 26.41
+      severity: "MODERATE_ORANGE"
+    documented_inundation:
+      source: "Sentinel-1 SAR / NRSC Bhuvan Flood Reference"
+      estimated_extent_sqkm: 98.2
+      affected_districts: ["Kendrapara", "Puri"]
+    data_availability:
+      imd_gridded_rainfall: "AVAILABLE"
+      gpm_imerg_v07b: "AVAILABLE"
+      cwc_gauge_daily: "AVAILABLE"
+      radar_volume_scans: "UNAVAILABLE"
+      nwp_operational_forecast: "UNAVAILABLE"
+      sentinel1_sar_mask: "AVAILABLE"
+
+  - event_id: "EVT-MAHANADI-2022-08"
+    name: "August 2022 Back-to-Back Depressions Flood"
+    state: "VERIFIED"
+    partition: "HELD_OUT_TEST"
+    period:
+      start_time: "2022-08-12T00:00:00Z"
+      peak_time: "2022-08-16T06:00:00Z"
+      end_time: "2022-08-20T23:59:59Z"
+      duration_hours: 216
+    meteorological_driver: "Two successive low pressure systems BOB 05 & BOB 06 over North Bay"
+    documented_rainfall:
+      source: "IMD 0.25° Daily Gridded Archive & IMERG V07B"
+      catchment_peak_24h_mm: 245.0
+      basin_average_72h_mm: 228.0
+    documented_hydrology:
+      source: "CWC Telemetry Bulletin"
+      mundali_peak_discharge_cumec: 26800.0
+      naraj_peak_stage_m: 26.65
+      danger_level_m: 26.41
+      severity: "SEVERE_RED"
+    documented_inundation:
+      source: "Sentinel-1 SAR (Acquisition 2022-08-17)"
+      estimated_extent_sqkm: 184.6
+      affected_districts: ["Cuttack", "Puri", "Kendrapara", "Jagatsinghpur"]
+    data_availability:
+      imd_gridded_rainfall: "AVAILABLE"
+      gpm_imerg_v07b: "AVAILABLE"
+      cwc_gauge_daily: "AVAILABLE"
+      radar_volume_scans: "UNAVAILABLE"
+      nwp_operational_forecast: "UNAVAILABLE"
+      sentinel1_sar_mask: "AVAILABLE"
+
+  - event_id: "EVT-MAHANADI-2023-07"
+    name: "July 2023 Upper Catchment Inflow Wave"
+    state: "CANDIDATE"
+    partition: "TRAIN"
+    period:
+      start_time: "2023-07-20T00:00:00Z"
+      peak_time: "2023-07-23T18:00:00Z"
+      end_time: "2023-07-26T23:59:59Z"
+      duration_hours: 168
+    meteorological_driver: "Monsoon trough active over Chhattisgarh causing Hirakud surcharge"
+    documented_hydrology:
+      mundali_peak_discharge_cumec: 18500.0
+      naraj_peak_stage_m: 25.10
+      severity: "ADVISORY_YELLOW"
+    data_availability:
+      imd_gridded_rainfall: "AVAILABLE"
+      gpm_imerg_v07b: "AVAILABLE"
+      cwc_gauge_daily: "PARTIAL"
+
+  - event_id: "EVT-MAHANADI-2024-08"
+    name: "August 2024 Active Monsoon Convective Surcharge"
+    state: "VERIFIED"
+    partition: "HELD_OUT_TEST"
+    period:
+      start_time: "2024-08-01T00:00:00Z"
+      peak_time: "2024-08-04T12:00:00Z"
+      end_time: "2024-08-07T23:59:59Z"
+      duration_hours: 168
+    meteorological_driver: "Low pressure system over NW Bay of Bengal with intense mesoscale convective clusters"
+    documented_rainfall:
+      source: "IMD 0.25° & IMERG V07B Early"
+      catchment_peak_24h_mm: 195.0
+      basin_average_72h_mm: 162.0
+    documented_hydrology:
+      mundali_peak_discharge_cumec: 22600.0
+      naraj_peak_stage_m: 26.10
+      severity: "MODERATE_ORANGE"
+    documented_inundation:
+      estimated_extent_sqkm: 112.0
+    data_availability:
+      imd_gridded_rainfall: "AVAILABLE"
+      gpm_imerg_v07b: "AVAILABLE"
+      cwc_gauge_daily: "AVAILABLE"
+      sentinel1_sar_mask: "AVAILABLE"
+
+  - event_id: "EVT-MAHANADI-2019-05-FANI"
+    name: "May 2019 Extremely Severe Cyclonic Storm Fani"
+    state: "REJECTED"
+    rejection_reason: "Primary hazard was catastrophic storm surge and extreme wind damage rather than typical monsoon inland rainfall-runoff river flooding."

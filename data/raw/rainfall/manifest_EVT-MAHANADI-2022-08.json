@@ -1,0 +1,17 @@
+{
+  "event_id": "EVT-MAHANADI-2022-08",
+  "ingestion_timestamp": "2026-09-04T08:41:51.269815+00:00",
+  "raw_files": {
+    "imd_gridded": {
+      "file": "data/raw/rainfall/imd_gridded_025_EVT-MAHANADI-2022-08_raw.csv",
+      "sha256": "de78c85596be807175de5a1d84a75abb269c556452c045c6a08c7154dfc50122",
+      "records": 360
+    },
+    "gpm_imerg": {
+      "file": "data/raw/rainfall/gpm_imerg_30min_EVT-MAHANADI-2022-08_raw.csv",
+      "sha256": "a9ee78f5ede0f4d2ca9c5a4ffd3c06e3b582304e155b8aa4b686cf0559953814",
+      "records": 432
+    }
+  },
+  "status": "INGESTION_COMPLETED"
+}

@@ -1,0 +1,101 @@
+{
+  "catalog_version": "1.0.0",
+  "basin_id": "pilot-mahanadi-delta",
+  "created_at": "2026-08-27T08:50:00Z",
+  "datasets": [
+    {
+      "dataset_id": "IMD_AWS_ARG_ODISHA",
+      "provider": "India Meteorological Department (IMD)",
+      "product": "Surface Automatic Weather Station / Rain Gauge Telemetry",
+      "version": "v2.1",
+      "spatial_coverage": "Odisha Coastal Catchment (20.0-21.5N, 84.5-87.0E)",
+      "temporal_resolution": "15 minutes",
+      "latency_typical_mins": 25,
+      "license": "IMD Open Meteorological Data Protocol (Research Use)",
+      "access_method": "HTTPS API / Ingestion Adapter",
+      "quality_flags_implemented": [
+        "GOOD",
+        "SUSPECT",
+        "BAD",
+        "MISSING",
+        "STALE",
+        "ESTIMATED"
+      ]
+    },
+    {
+      "dataset_id": "DOPPLER_RADAR_PARADIP",
+      "provider": "IMD / Doppler Weather Radar Network",
+      "product": "DWR MaxZ (dBZ), Surface Rainfall Intensity (SRI), PAC (Precipitation Accumulation)",
+      "version": "Max-Z 250km PPI",
+      "spatial_coverage": "250km Radius from Paradip (20.264N, 86.671E)",
+      "temporal_resolution": "10 minutes",
+      "latency_typical_mins": 12,
+      "license": "IMD Radar Services Protocol",
+      "access_method": "Adapter / Machine-readable grid format fallback"
+    },
+    {
+      "dataset_id": "MOSDAC_INSAT_3DR_HEM",
+      "provider": "ISRO / SAC MOSDAC",
+      "product": "Hydro-Estimator Method (HEM) Half-Hourly Precipitation",
+      "version": "INSAT-3DR L2B",
+      "spatial_coverage": "Indian Subcontinent (0.04 deg resolution, ~4km)",
+      "temporal_resolution": "30 minutes",
+      "latency_typical_mins": 45,
+      "license": "ISRO MOSDAC Data Policy",
+      "access_method": "Authorized API / Fallback Simulator"
+    },
+    {
+      "dataset_id": "NASA_GPM_IMERG_EARLY",
+      "provider": "NASA / PMM",
+      "product": "GPM IMERG Early Precipitation L3 Half-Hourly 0.1x0.1 deg",
+      "version": "V07B",
+      "spatial_coverage": "Global 60N-60S",
+      "temporal_resolution": "30 minutes",
+      "latency_typical_mins": 240,
+      "license": "NASA Open Data Policy",
+      "access_method": "HTTPS / GES DISC"
+    },
+    {
+      "dataset_id": "ECMWF_IFS_OPEN_DATA",
+      "provider": "ECMWF",
+      "product": "Open Data 0.25 deg NWP Precipitation, Wind, Pressure, Temperature, RH",
+      "version": "IFS Cycle 48r1",
+      "spatial_coverage": "Global / Regional clip",
+      "temporal_resolution": "3-hourly to 6-hourly (0-72h horizon)",
+      "latency_typical_mins": 360,
+      "license": "CC-BY-4.0",
+      "access_method": "ECMWF Open Data API / AWS Open Data"
+    },
+    {
+      "dataset_id": "CWC_TELEMETRY_MAHANADI",
+      "provider": "Central Water Commission (CWC) / India-WRIS",
+      "product": "Hourly River Stage (m) and Estimated Discharge (cumecs)",
+      "version": "v1.4",
+      "spatial_coverage": "Mahanadi Basin Gauge Network",
+      "temporal_resolution": "1 hour",
+      "latency_typical_mins": 30,
+      "license": "CWC Public Telemetry Access Protocol",
+      "access_method": "India-WRIS REST API / WRD Sensor Feeds"
+    },
+    {
+      "dataset_id": "COPERNICUS_DEM_GLO30",
+      "provider": "ESA / Copernicus",
+      "product": "Global 30m Digital Elevation Model (GLO-30)",
+      "version": "2024 Release",
+      "spatial_coverage": "Mahanadi Delta Pilot Polygon",
+      "spatial_resolution": "30 meters",
+      "license": "Copernicus Open Access",
+      "access_method": "GeoTIFF Tile Storage"
+    },
+    {
+      "dataset_id": "WORLDPOP_INDIA_2025",
+      "provider": "WorldPop / University of Southampton",
+      "product": "Constrained Population Density Count 100m Grid",
+      "version": "2025 Extrapolated",
+      "spatial_coverage": "Odisha Coastal Districts",
+      "spatial_resolution": "100 meters",
+      "license": "CC-BY-4.0",
+      "access_method": "WorldPop API / Staged Raster"
+    }
+  ]
+}

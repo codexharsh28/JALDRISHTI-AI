@@ -1,0 +1,96 @@
+# JALDRISHTI AI — Pilot Basin Data & Resolution Harmonization Manifest
+# Explicitly documents native source resolutions vs computational model grids
+
+pilot_basin:
+  id: "pilot-mahanadi-delta"
+  name: "Mahanadi Delta Pilot Catchment"
+  area_sqkm: 14250.0
+  crs: "EPSG:4326"
+  bounds: [19.80, 84.80, 21.05, 86.95]
+  center: [20.46, 85.88]
+  computational_model_grid:
+    resolution: "2.5 km"
+    shape: [50, 86]
+    note: "The 2.5km grid is a mathematical computational representation used for multi-source spatial fusion and surrogate inference. Native source resolutions vary as documented below."
+
+native_data_sources:
+  - source_id: "IMD_AWS_ARG_ODISHA"
+    provider: "India Meteorological Department (IMD)"
+    product: "Automated Weather Stations (AWS) & Rain Gauges (ARG)"
+    native_spatial_resolution: "Point Observations (Station Network)"
+    temporal_resolution: "15 minutes"
+    resampling_method: "Inverse Distance Weighting (IDW) to 2.5km computational grid"
+    is_simulation: true
+    source_type: "SIMULATED SENSOR TELEMETRY"
+
+  - source_id: "DOPPLER_RADAR_PARADIP"
+    provider: "IMD Radar Network"
+    product: "Doppler Weather Radar (DWR) Max-Z & Surface Rainfall Intensity (SRI)"
+    native_spatial_resolution: "1.0 km Cartesian PPI (250 km max range)"
+    temporal_resolution: "10 minutes"
+    resampling_method: "Bilinear interpolation to 2.5km computational grid"
+    is_simulation: true
+    source_type: "SIMULATED SENSOR GRID"
+
+  - source_id: "MOSDAC_INSAT_3DR_HEM"
+    provider: "ISRO / SAC MOSDAC"
+    product: "INSAT-3DR Hydro-Estimator Method (HEM)"
+    native_spatial_resolution: "0.04° (~4.0 km at equator)"
+    temporal_resolution: "30 minutes"
+    resampling_method: "Bilinear spatial remapping to 2.5km computational grid"
+    is_simulation: true
+    source_type: "SIMULATED SATELLITE PRODUCT"
+
+  - source_id: "NASA_GPM_IMERG_EARLY"
+    provider: "NASA / PMM"
+    product: "GPM IMERG Early Precipitation L3"
+    native_spatial_resolution: "0.10° (~10.0 km)"
+    temporal_resolution: "30 minutes"
+    resampling_method: "Area-weighted spatial aggregation to 2.5km computational grid"
+    is_simulation: true
+    source_type: "SIMULATED SATELLITE BLEND"
+
+  - source_id: "ECMWF_IFS_OPEN_DATA"
+    provider: "ECMWF"
+    product: "IFS Cycle 48r1 Open Data Forecast Fields"
+    native_spatial_resolution: "0.25° (~28.0 km)"
+    temporal_resolution: "3-hourly / 6-hourly"
+    resampling_method: "Bicubic downscaling to catchment background state"
+    is_simulation: true
+    source_type: "SIMULATED NWP MODEL"
+
+  - source_id: "CWC_TELEMETRY_MAHANADI"
+    provider: "Central Water Commission (CWC) / India-WRIS"
+    product: "Gauge Stage (m) & Discharge Telemetry (cumecs)"
+    native_spatial_resolution: "Point Gauge (12 Pilot Stations)"
+    temporal_resolution: "1 hour"
+    resampling_method: "Direct node-point binding to River Topology Network"
+    is_simulation: true
+    source_type: "SIMULATED HYDROLOGICAL TELEMETRY"
+
+  - source_id: "COPERNICUS_DEM_GLO30"
+    provider: "ESA Copernicus"
+    product: "Global Digital Elevation Model GLO-30"
+    native_spatial_resolution: "30 meters (0.000277°)"
+    temporal_resolution: "Static Elevation Baseline"
+    resampling_method: "Pre-computed terrain attributes (slope, HAND, flow accumulation) aggregated to hydraulic surrogate cells"
+    is_simulation: true
+    source_type: "SYNTHETIC DEM BASELINE"
+
+  - source_id: "SENTINEL_1_SAR_GRD"
+    provider: "ESA Copernicus"
+    product: "SAR Ground Range Detected (GRD) Flood Masks"
+    native_spatial_resolution: "10–20 meters"
+    temporal_resolution: "6–12 day repeat pass (Post-event validation reference only)"
+    resampling_method: "Polygon vectorization for IoU/F1 holdout verification"
+    is_simulation: true
+    source_type: "SYNTHETIC HISTORICAL FLOOD REFERENCE"
+
+  - source_id: "WORLDPOP_INDIA_2025"
+    provider: "WorldPop / University of Southampton"
+    product: "Constrained 100m Population Density Raster"
+    native_spatial_resolution: "100 meters"
+    temporal_resolution: "Annual Extrapolated Baseline"
+    resampling_method: "Zonal polygon sum across inundation footprints"
+    is_simulation: true
+    source_type: "SYNTHETIC DEMOGRAPHIC BASELINE"

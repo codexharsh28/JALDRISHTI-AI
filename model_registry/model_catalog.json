@@ -1,0 +1,144 @@
+{
+  "registry_version": "v3.2",
+  "updated_at": "2026-08-27T00:00:00Z",
+  "models": [
+    {
+      "model_id": "MOD-NOWCAST-L0-PERSISTENCE",
+      "model_name": "Precipitation Persistence Baseline (Level 0)",
+      "category": "RAINFALL_NOWCAST",
+      "version": "v1.0",
+      "status": "VALIDATED",
+      "dataset_state": "SYNTHETIC_HOLDOUT",
+      "training_events": ["EVT-MAHANADI-2020-08", "EVT-MAHANADI-2023-07"],
+      "validation_events": ["EVT-MAHANADI-2021-09"],
+      "test_events": ["EVT-MAHANADI-2022-08", "EVT-MAHANADI-2024-08"],
+      "metrics": {
+        "csi_35mm": 0.38,
+        "pod": 0.52,
+        "far": 0.41,
+        "rmse_mm": 11.4
+      }
+    },
+    {
+      "model_id": "MOD-NOWCAST-L1-ADVECTION",
+      "model_name": "Semi-Lagrangian Optical Flow Advection (Level 1)",
+      "category": "RAINFALL_NOWCAST",
+      "version": "v1.2",
+      "status": "VALIDATED",
+      "dataset_state": "SYNTHETIC_HOLDOUT",
+      "metrics": {
+        "csi_35mm": 0.54,
+        "pod": 0.68,
+        "far": 0.29,
+        "rmse_mm": 8.2
+      }
+    },
+    {
+      "model_id": "MOD-NOWCAST-L2-GRADIENT-BOOSTED",
+      "model_name": "Gradient Boosted Heavy-Rain Point Regressor (Level 2)",
+      "category": "RAINFALL_NOWCAST",
+      "version": "v2.1",
+      "status": "VALIDATED",
+      "dataset_state": "SYNTHETIC_HOLDOUT",
+      "artifact_path": "model_registry/nowcast_heavy_rain_clf.joblib",
+      "metrics": {
+        "csi_35mm": 0.75,
+        "pod": 0.947,
+        "far": 0.217,
+        "rmse_mm": 2.55
+      }
+    },
+    {
+      "model_id": "MOD-NOWCAST-L3-ANALYTICAL",
+      "model_name": "Analytical Storm Decay Precipitation Surrogate (Level 3)",
+      "category": "RAINFALL_NOWCAST",
+      "version": "v3.2",
+      "status": "CANDIDATE",
+      "dataset_state": "SYNTHETIC_HOLDOUT",
+      "metrics": {
+        "csi_35mm": 0.76,
+        "pod": 0.86,
+        "far": 0.14,
+        "rmse_mm": 4.8
+      }
+    },
+    {
+      "model_id": "RAIN_L3_CONVLSTM",
+      "model_name": "PyTorch Spatiotemporal ConvLSTM Nowcaster (Level 3)",
+      "category": "RAINFALL_NOWCAST",
+      "version": "v1.0-PyTorch",
+      "status": "EXPERIMENTAL",
+      "framework": "PyTorch",
+      "parameter_count": 108065,
+      "input_shape": [4, 1, 16, 24],
+      "output_shape": [12, 1, 16, 24],
+      "dataset_state": "SYNTHETIC_HOLDOUT",
+      "training_events": ["EVT-MAHANADI-2020-08", "EVT-MAHANADI-2023-07"],
+      "validation_events": ["EVT-MAHANADI-2021-09"],
+      "test_events": ["EVT-MAHANADI-2022-08", "EVT-MAHANADI-2024-08"],
+      "artifact_path": "model_registry/convlstm_nowcast.pt",
+      "metrics": {
+        "overall_rmse_mm": 11.25,
+        "csi_35mm": 0.712,
+        "csi_15mm": 0.765
+      }
+    },
+    {
+      "model_id": "MOD-HYDRO-L0-PERSISTENCE",
+      "model_name": "Autoregressive Stage Persistence Baseline",
+      "category": "STREAMFLOW",
+      "version": "v1.0",
+      "status": "VALIDATED",
+      "dataset_state": "REAL_HISTORICAL_HINDCAST",
+      "metrics": {
+        "nse_24h": 0.42,
+        "kge_24h": 0.48,
+        "peak_time_err_h": 4.5,
+        "peak_mag_err_pct": 24.0
+      }
+    },
+    {
+      "model_id": "MOD-HYDRO-L1-GRADIENT-BOOSTED",
+      "model_name": "Gradient Boosted Catchment Runoff Regressor",
+      "category": "STREAMFLOW",
+      "version": "v1.8",
+      "status": "VALIDATED",
+      "dataset_state": "REAL_HISTORICAL_HINDCAST",
+      "artifact_path": "model_registry/streamflow_gb_model.joblib",
+      "metrics": {
+        "nse_24h": 0.72,
+        "kge_24h": 0.74,
+        "peak_time_err_h": 2.8,
+        "peak_mag_err_pct": 14.5
+      }
+    },
+    {
+      "model_id": "MOD-HYDRO-L2-ANALYTICAL-ROUTING",
+      "model_name": "Multi-Horizon Analytical Hydrograph Model with River Network Graph Routing",
+      "category": "STREAMFLOW",
+      "version": "v2.4",
+      "status": "CANDIDATE",
+      "dataset_state": "REAL_HISTORICAL_HINDCAST",
+      "metrics": {
+        "nse_24h": 0.89,
+        "kge_24h": 0.86,
+        "peak_time_err_h": 0.8,
+        "peak_mag_err_pct": 5.4
+      }
+    },
+    {
+      "model_id": "MOD-INUNDATION-SURROGATE",
+      "model_name": "Physics-Guided 2D Hydraulic Spatial / RF Surrogate",
+      "category": "INUNDATION",
+      "version": "v3.1",
+      "status": "CANDIDATE",
+      "dataset_state": "REAL_HISTORICAL_HINDCAST",
+      "artifact_path": "model_registry/inundation_rf_model.joblib",
+      "metrics": {
+        "intersection_over_union_iou": 0.796,
+        "f1_score": 0.887,
+        "depth_rmse_m": 0.27
+      }
+    }
+  ]
+}

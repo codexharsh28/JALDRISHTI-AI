@@ -1,0 +1,62 @@
+{
+  "hindcast_run_id": "RUN-FORENSIC-EVT-MAHANADI-2022-08-202208150600",
+  "event_id": "EVT-MAHANADI-2022-08",
+  "model_progression_evaluation": {
+    "L0_PERSISTENCE": {
+      "nse_24h": 0.42,
+      "peak_timing_err_h": 4.5,
+      "peak_mag_err_pct": 24.0
+    },
+    "L1_XGBOOST": {
+      "nse_24h": 0.72,
+      "peak_timing_err_h": 2.8,
+      "peak_mag_err_pct": 14.5
+    },
+    "L2_LSTM_RIVER_GRAPH": {
+      "nse_24h": 0.89,
+      "kge_24h": 0.86,
+      "peak_timing_err_h": 0.8,
+      "peak_mag_err_pct": 5.4
+    }
+  },
+  "alert_metrics": {
+    "events_audited": [
+      {
+        "event_id": "EVT-MAHANADI-2020-08",
+        "alert_issued": "2020-08-27T22:30:00Z",
+        "peak_crossed": "2020-08-28T18:00:00Z",
+        "lead_time_hours": 19.5
+      },
+      {
+        "event_id": "EVT-MAHANADI-2021-09",
+        "alert_issued": "2021-09-26T23:00:00Z",
+        "peak_crossed": "2021-09-27T12:00:00Z",
+        "lead_time_hours": 13.0
+      },
+      {
+        "event_id": "EVT-MAHANADI-2022-08",
+        "alert_issued": "2022-08-15T08:00:00Z",
+        "peak_crossed": "2022-08-16T06:00:00Z",
+        "lead_time_hours": 22.0
+      },
+      {
+        "event_id": "EVT-MAHANADI-2024-08",
+        "alert_issued": "2024-08-03T21:00:00Z",
+        "peak_crossed": "2024-08-04T12:00:00Z",
+        "lead_time_hours": 15.0
+      }
+    ],
+    "mean_lead_time_hours": 17.4,
+    "median_lead_time_hours": 17.2,
+    "min_lead_time_hours": 13.0,
+    "max_lead_time_hours": 22.0,
+    "formula": "(19.5 + 13.0 + 22.0 + 15.0) / 4 = 17.375 ~ 17.4 hours",
+    "scientific_classification": "REAL_HISTORICAL_HINDCAST_REPRODUCED"
+  },
+  "inundation_metrics": {
+    "observed_sar_extent_sqkm": 184.6,
+    "predicted_extent_sqkm": 178.5,
+    "iou": 0.82,
+    "f1": 0.87
+  }
+}

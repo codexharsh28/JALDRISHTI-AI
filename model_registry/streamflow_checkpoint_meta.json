@@ -1,0 +1,36 @@
+{
+  "model_id": "MOD-HYDRO-XGBOOST-01",
+  "model_version": "v1.8",
+  "trained_at": "2026-08-27T03:42:38.161144+00:00",
+  "training_dataset": "data/simulation/hydrograph_events_train.csv",
+  "features": [
+    "rain_6h",
+    "rain_24h",
+    "soil_saturation",
+    "current_stage_m",
+    "stage_lag_3h_m",
+    "rate_of_rise_m_hr",
+    "upstream_discharge_cumec"
+  ],
+  "metrics_summary": {
+    "L0_AUTOREGRESSIVE_PERSISTENCE": {
+      "nse_24h": 0.42,
+      "kge_24h": 0.48,
+      "peak_time_err_h": 4.5,
+      "peak_mag_err_pct": 24.0
+    },
+    "L1_GRADIENT_BOOSTED": {
+      "nse_24h": 0.986,
+      "kge_24h": 0.957,
+      "rmse_m": 0.29,
+      "mae_m": 0.17
+    },
+    "L2_LSTM_RIVER_GRAPH_SURROGATE": {
+      "nse_24h": 0.89,
+      "kge_24h": 0.86,
+      "peak_time_err_h": 0.8,
+      "peak_mag_err_pct": 5.4
+    }
+  },
+  "is_simulation": true
+}

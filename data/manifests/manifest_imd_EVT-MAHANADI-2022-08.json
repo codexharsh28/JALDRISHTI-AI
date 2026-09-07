@@ -1,0 +1,19 @@
+{
+  "dataset_id": "IMD-025-GRIDDED-EVT-MAHANADI-2022-08",
+  "provider": "India Meteorological Department (IMD) / National Climate Centre",
+  "product": "IMD 0.25\u00b0 x 0.25\u00b0 Daily Gridded Rainfall Archive (Pai et al.)",
+  "dataset_state": "REAL_HISTORICAL_ANALYSIS",
+  "version": "v2024",
+  "event_id": "EVT-MAHANADI-2022-08",
+  "temporal_range": [
+    "2022-08-12",
+    "2022-08-20"
+  ],
+  "native_spatial_resolution": "0.25\u00b0 (~28 km)",
+  "native_time_resolution": "24 hours (08:30 IST to 08:30 IST)",
+  "crs": "EPSG:4326",
+  "sha256": "848fbe25cdaef989a9a044519228fb410d7236e907106b8ad2cc5e712fed9493",
+  "cached_file": "data/historical/imd_gridded_025_EVT-MAHANADI-2022-08.csv",
+  "records_count": 360,
+  "license": "IMD Open Climate Data / Non-Commercial Research Access"
+}
